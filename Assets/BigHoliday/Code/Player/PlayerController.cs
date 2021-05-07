@@ -25,7 +25,10 @@ namespace BigHoliday
 
         #region Methods
 
-
+        private void ChangePosition(Vector3 xPoz)
+        {
+            Position += xPoz;
+        }
 
         #endregion
     }

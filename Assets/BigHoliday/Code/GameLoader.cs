@@ -7,7 +7,7 @@ namespace BigHoliday
     {
         #region Fields
 
-
+        [SerializeField] internal GameObject Player;
 
         #endregion
 
