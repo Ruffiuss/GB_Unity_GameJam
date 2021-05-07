@@ -9,6 +9,8 @@ namespace BigHoliday
 
         [SerializeField] internal GameObject Player;
 
+        private ResourceLoader _resourceLoader;
+
         #endregion
 
 
@@ -16,7 +18,7 @@ namespace BigHoliday
 
         internal GameLoader()
         {
-
+            _resourceLoader = new ResourceLoader();
         }
 
         #endregion

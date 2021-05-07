@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 268891530}
   - component: {fileID: 268891531}
   m_Layer: 0
-  m_Name: white_sprite
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -897,6 +897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4371b4a1dbb59f045bbb731cd5c07779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 86252893}
 --- !u!4 &1465242699
 Transform:
   m_ObjectHideFlags: 0
