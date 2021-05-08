@@ -12,6 +12,8 @@ namespace BigHoliday
         private SpriteAnimatorConfig _config;
         private Dictionary<SpriteRenderer, Animation> _activeAnimations;
 
+        private float _animationSpeed;
+
         #endregion
 
 
@@ -21,7 +23,6 @@ namespace BigHoliday
         {
             _config = config;
             _activeAnimations = new Dictionary<SpriteRenderer, Animation>();
-            
         }
 
         #endregion
@@ -29,18 +30,18 @@ namespace BigHoliday
 
         #region Methods
 
-        internal void StartAnimation(SpriteRenderer spriteRenderer, AnimState state, bool isLoop, float speed = 10.0f)
+        internal void StartAnimation(SpriteRenderer spriteRenderer, AnimState state, bool isLoop)
         {
             if (_activeAnimations.TryGetValue(spriteRenderer, out var animation))
             {
                 animation.IsLooped = isLoop;
-                animation.AnimSpeed = speed;
                 animation.IsSleeps = false;
 
                 if (animation.State != state)
                 {
                     animation.State = state;
                     animation.Sprites = _config.Sequence.Find(sequence => sequence.State == state).Sprites;
+                    animation.AnimSpeed = _config.Sequence.Find(sequence => sequence.State == state).AnimationSpeed;
                     animation.Counter = 0.0f;
                 }
             }
@@ -51,7 +52,7 @@ namespace BigHoliday
                     State = state,
                     Sprites = _config.Sequence.Find(sequence => sequence.State == state).Sprites,
                     IsLooped = isLoop,
-                    AnimSpeed = speed
+                    AnimSpeed = _config.Sequence.Find(sequence => sequence.State == state).AnimationSpeed
                 });
             }
         }
