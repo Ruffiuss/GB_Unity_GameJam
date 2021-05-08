@@ -13,7 +13,6 @@ namespace BigHoliday
         private Vector3 _rightScale;
 
         private float _movingThreshold = 0.35f;
-        private float _walkSpeed = 4.0f;
 
         #endregion
 
@@ -46,14 +45,25 @@ namespace BigHoliday
 
         public void FixedUpdate(float fixedDeltaTime)
         {
+            Movement(fixedDeltaTime);
+            Interaction();
+        }
+
+        private void Movement(float fixedDeltaTime)
+        {
             var xAxisInput = Input.GetAxis("Horizontal");
             if (Mathf.Abs(xAxisInput) > _movingThreshold)
             {
                 if (OnStateChange != null) OnStateChange.Invoke(AnimState.Walk);
-                _playerView.transform.Translate((Vector3.right * fixedDeltaTime * _walkSpeed) * (xAxisInput < 0 ? -1 : 1));
+                _playerView.transform.Translate((Vector3.right * fixedDeltaTime * GameSettings.PLAYER_WALK_SPEED) * (xAxisInput < 0 ? -1 : 1));
                 _playerView.transform.localScale = (xAxisInput < 0 ? _leftScale : _rightScale);
             }
             else if (OnStateChange != null) OnStateChange.Invoke(AnimState.Idle);
+        }
+
+        private void Interaction()
+        {
+
         }
 
         #endregion
