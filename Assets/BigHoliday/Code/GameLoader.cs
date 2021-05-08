@@ -1,8 +1,9 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 
 namespace BigHoliday
-{
+{  
     internal sealed class GameLoader : MonoBehaviour
     {
         #region Fields
@@ -10,6 +11,7 @@ namespace BigHoliday
         [SerializeField] internal GameObject Player;
         [SerializeField] internal string AnimationConfigsPath = "AnimationConfigs";
         [SerializeField] internal string PlayerAnimationConfigPath;
+        [SerializeField] internal List<ColliderProvider> Colliders;
 
         private ResourceLoader _resourceLoader;
         private Controllers _controllers;
