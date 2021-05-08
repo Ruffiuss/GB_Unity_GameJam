@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="48336219-9dbb-49a6-9140-f5ad1cbc3040" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/menu.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +16,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/GameLoader.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/GameLoader.cs" />
+      <option value="$PROJECT_DIR$/MenuControls.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sFY448urLWlUg8IJ3wY4Rqosr0" />
@@ -42,6 +50,8 @@
       <updated>1620469613855</updated>
       <workItem from="1620469620591" duration="28000" />
       <workItem from="1620469839714" duration="713000" />
+      <workItem from="1620483968155" duration="622000" />
+      <workItem from="1620488132672" duration="267000" />
     </task>
     <servers />
   </component>
@@ -60,6 +70,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
