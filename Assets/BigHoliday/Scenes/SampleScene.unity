@@ -176,7 +176,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a09f57a59e9880d4c87ec487b50afc4a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -655,6 +655,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 86252893}
+  AnimationConfigsPath: AnimationConfigs
+  PlayerAnimationConfigPath: PlayerAnimations
 --- !u!4 &1465242699
 Transform:
   m_ObjectHideFlags: 0
