@@ -12,8 +12,8 @@ namespace BigHoliday
         private Vector3 _leftScale;
         private Vector3 _rightScale;
 
-        private float _movingThreshold = 0.4f;
-        private float _walkSpeed = 5.0f;
+        private float _movingThreshold = 0.35f;
+        private float _walkSpeed = 4.0f;
 
         #endregion
 
