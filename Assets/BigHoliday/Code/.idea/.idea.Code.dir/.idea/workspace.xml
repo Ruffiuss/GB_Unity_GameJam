@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="48336219-9dbb-49a6-9140-f5ad1cbc3040" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Code.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Prefabs/Resources.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Resources.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Resources/AnimationConfigs/Visitor_1_Animations.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Resources/AnimationConfigs/Visitor_1_Animations.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scenes/menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/menu.unity" afterDir="false" />
     </list>
@@ -18,11 +18,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/GameLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Settings.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/GameLoader.cs" />
       <option value="$PROJECT_DIR$/MenuControls.cs" />
+      <option value="$PROJECT_DIR$/Settings.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sFY448urLWlUg8IJ3wY4Rqosr0" />
@@ -52,6 +54,7 @@
       <workItem from="1620469839714" duration="713000" />
       <workItem from="1620483968155" duration="622000" />
       <workItem from="1620488132672" duration="267000" />
+      <workItem from="1620490995957" duration="1432000" />
     </task>
     <servers />
   </component>
