@@ -11,11 +11,13 @@ namespace BigHoliday
         [SerializeField] internal string AnimationConfigsPath = "AnimationConfigs";
         [SerializeField] internal string PlayerAnimationConfigPath;
 
-        private SpriteAnimController _playerAnimController;
         private ResourceLoader _resourceLoader;
         private Controllers _controllers;
+        private SpriteAnimController _playerAnimController;
+        private PlayerController _playerController;
 
         private float _deltaTime;
+        private float _fixedDeltaTime;
 
         #endregion
 
@@ -30,12 +32,21 @@ namespace BigHoliday
             _playerAnimController = new SpriteAnimController(_resourceLoader.LoadAnimConfig(AnimationConfigsPath + @"\" + PlayerAnimationConfigPath));
             _playerAnimController.StartAnimation(Player.GetComponent<SpriteRenderer>(), AnimState.Idle, true);
             _controllers.AddController(_playerAnimController);
+
+            _playerController = new PlayerController(Player);
+            _controllers.AddController(_playerController);
         }
 
         private void Update()
         {
             _deltaTime = Time.deltaTime;
             _controllers.Update(_deltaTime);
+        }
+
+        private void FixedUpdate()
+        {
+            _fixedDeltaTime = Time.fixedDeltaTime;
+            _controllers.FixedUpdate(_fixedDeltaTime);
         }
 
         #endregion
