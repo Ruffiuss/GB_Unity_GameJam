@@ -4,7 +4,7 @@ using System;
 
 namespace BigHoliday
 {
-    internal sealed class PlayerController : IFixedUpdatable
+    internal sealed class PlayerController : IFixedUpdatable, IChangeableStates
     {
         #region Fields
 
@@ -14,7 +14,15 @@ namespace BigHoliday
 
         private float _movingThreshold = 0.001f;
         private float _walkSpeed = 5.0f;
-        private bool _goesSideway;
+
+        #endregion
+
+
+        #region Properties
+
+        public SpriteRenderer SpriteRenderer { get; private set; }
+        public event Action<AnimState> OnStateChange;
+        public bool IsLooped { get; private set; }
 
         #endregion
 
@@ -26,6 +34,9 @@ namespace BigHoliday
             _playerView = playerView;
             _rightScale = playerView.transform.localScale;
             _leftScale = new Vector3(_rightScale.x * -1, _rightScale.y, _rightScale.z);
+            _playerView.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
+            SpriteRenderer = spriteRenderer;
+            IsLooped = true;
         }
 
         #endregion
@@ -38,9 +49,11 @@ namespace BigHoliday
             var xAxisInput = Input.GetAxis("Horizontal");
             if (Mathf.Abs(xAxisInput) > _movingThreshold)
             {
+                if (OnStateChange != null) OnStateChange.Invoke(AnimState.Walk);
                 _playerView.transform.Translate((Vector3.right * fixedDeltaTime * _walkSpeed) * (xAxisInput < 0 ? -1 : 1));
                 _playerView.transform.localScale = (xAxisInput < 0 ? _leftScale : _rightScale);
             }
+            else if (OnStateChange != null) OnStateChange.Invoke(AnimState.Idle);
         }
 
         #endregion

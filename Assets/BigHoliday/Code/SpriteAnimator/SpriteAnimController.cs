@@ -11,6 +11,8 @@ namespace BigHoliday
 
         private SpriteAnimatorConfig _config;
         private Dictionary<SpriteRenderer, Animation> _activeAnimations;
+        private IChangeableStates _animationTarget;
+        private AnimState _currentState;
 
         private float _animationSpeed;
 
@@ -19,10 +21,13 @@ namespace BigHoliday
 
         #region ClassLifeCycles
 
-        internal SpriteAnimController(SpriteAnimatorConfig config)
+        internal SpriteAnimController(SpriteAnimatorConfig config, IChangeableStates animTarget)
         {
             _config = config;
             _activeAnimations = new Dictionary<SpriteRenderer, Animation>();
+            _animationTarget = animTarget;
+            _animationTarget.OnStateChange += TrackCurrentState;
+            StartAnimation();
         }
 
         #endregion
@@ -30,29 +35,35 @@ namespace BigHoliday
 
         #region Methods
 
-        internal void StartAnimation(SpriteRenderer spriteRenderer, AnimState state, bool isLoop)
+        private void TrackCurrentState(AnimState state)
         {
-            if (_activeAnimations.TryGetValue(spriteRenderer, out var animation))
+            _currentState = state;
+            StartAnimation();
+        }
+
+        internal void StartAnimation()
+        {
+            if (_activeAnimations.TryGetValue(_animationTarget.SpriteRenderer, out var animation))
             {
-                animation.IsLooped = isLoop;
+                animation.IsLooped = _animationTarget.IsLooped;
                 animation.IsSleeps = false;
 
-                if (animation.State != state)
+                if (animation.State != _currentState)
                 {
-                    animation.State = state;
-                    animation.Sprites = _config.Sequence.Find(sequence => sequence.State == state).Sprites;
-                    animation.AnimSpeed = _config.Sequence.Find(sequence => sequence.State == state).AnimationSpeed;
+                    animation.State = _currentState;
+                    animation.Sprites = _config.Sequence.Find(sequence => sequence.State == _currentState).Sprites;
+                    animation.AnimSpeed = _config.Sequence.Find(sequence => sequence.State == _currentState).AnimationSpeed;
                     animation.Counter = 0.0f;
                 }
             }
             else
             {
-                _activeAnimations.Add(spriteRenderer, new Animation()
+                _activeAnimations.Add(_animationTarget.SpriteRenderer, new Animation()
                 {
-                    State = state,
-                    Sprites = _config.Sequence.Find(sequence => sequence.State == state).Sprites,
-                    IsLooped = isLoop,
-                    AnimSpeed = _config.Sequence.Find(sequence => sequence.State == state).AnimationSpeed
+                    State = _currentState,
+                    Sprites = _config.Sequence.Find(sequence => sequence.State == _currentState).Sprites,
+                    IsLooped = _animationTarget.IsLooped,
+                    AnimSpeed = _config.Sequence.Find(sequence => sequence.State == _currentState).AnimationSpeed
                 });
             }
         }

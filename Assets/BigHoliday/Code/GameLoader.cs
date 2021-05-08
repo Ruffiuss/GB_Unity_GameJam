@@ -29,12 +29,11 @@ namespace BigHoliday
             _resourceLoader = new ResourceLoader();
             _controllers = new Controllers();
 
-            _playerAnimController = new SpriteAnimController(_resourceLoader.LoadAnimConfig(AnimationConfigsPath + @"\" + PlayerAnimationConfigPath));
-            _playerAnimController.StartAnimation(Player.GetComponent<SpriteRenderer>(), AnimState.Idle, true);
-            _controllers.AddController(_playerAnimController);
-
             _playerController = new PlayerController(Player);
             _controllers.AddController(_playerController);
+
+            _playerAnimController = new SpriteAnimController(_resourceLoader.LoadAnimConfig(AnimationConfigsPath + @"\" + PlayerAnimationConfigPath), _playerController);
+            _controllers.AddController(_playerAnimController);
         }
 
         private void Update()
