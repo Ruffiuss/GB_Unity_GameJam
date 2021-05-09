@@ -50,6 +50,14 @@ namespace BigHoliday
             }
         }
 
+        private void OnTriggerStay2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Player"))
+            {
+                ContactedToilet.Invoke(gameObject.GetInstanceID());
+            }
+        }
+
         #endregion
 
 
