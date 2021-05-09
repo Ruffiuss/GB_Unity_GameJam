@@ -69,7 +69,7 @@ namespace BigHoliday
             {
                 Status = (ToiletStatus)UnityEngine.Random.Range(1,4);
                 ToiletStatusChange.Invoke(Status, gameObject.GetInstanceID());
-                Debug.Log($"{gameObject.name}-{Status}");
+                //Debug.Log($"{gameObject.name}-{Status}");
             }
             _timeToEvent = UnityEngine.Random.Range(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
         }

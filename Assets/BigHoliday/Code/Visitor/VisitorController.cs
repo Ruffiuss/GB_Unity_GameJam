@@ -16,6 +16,7 @@ namespace BigHoliday
 
         private float _spawnDelay = 10.0f;
         private float _timePassed = 0.0f;
+        private bool _haveFreeSpots = true;
 
         #endregion
 
@@ -43,7 +44,13 @@ namespace BigHoliday
             if (_timePassed > _spawnDelay)
             {
                 _timePassed = 0.0f;
-                SpawnVisitor();
+
+                if (_haveFreeSpots) SpawnVisitor();
+            }
+
+            foreach (var visitor in _visitorsQueue)
+            {
+                Debug.Log($"{visitor.GetInstanceID()}-{visitor.GetComponent<Visitor>().CurrentState}");
             }
         }
 
@@ -54,7 +61,11 @@ namespace BigHoliday
                 var spawnedVisitor = GameObject.Instantiate(_visitorTemplate, _spawnTransform) as GameObject;
                 _visitorsQueue.Enqueue(spawnedVisitor);
                 var visitor = spawnedVisitor.AddComponent<Visitor>();
-                visitor.SetupDestination(_toiletsQueue.Dequeue());
+                if (!_toiletsQueue.Count.Equals(0))
+                {
+                    visitor.SetupDestination(_toiletsQueue.Dequeue());
+                }
+                else _haveFreeSpots = false;
             }
         }
 

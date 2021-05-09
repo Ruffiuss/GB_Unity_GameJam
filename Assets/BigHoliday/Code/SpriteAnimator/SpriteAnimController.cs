@@ -14,8 +14,6 @@ namespace BigHoliday
         private IChangeableStates _animationTarget;
         private AnimState _currentState;
 
-        private float _animationSpeed;
-
         #endregion
 
 

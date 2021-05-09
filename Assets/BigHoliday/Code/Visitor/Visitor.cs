@@ -35,6 +35,7 @@ namespace BigHoliday
 
         private void Awake()
         {
+            IsLooped = true;
             SpriteRenderer = GetComponent<SpriteRenderer>();
             _random = new System.Random();
 
