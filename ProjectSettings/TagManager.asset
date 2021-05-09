@@ -8,6 +8,7 @@ TagManager:
   - Toilet
   - Limit
   - Tools
+  - Visitor
   layers:
   - Default
   - TransparentFX
