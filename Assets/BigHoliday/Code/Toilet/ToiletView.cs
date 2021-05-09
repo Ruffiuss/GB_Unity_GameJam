@@ -59,7 +59,7 @@ namespace BigHoliday
         {
             if (Status == ToiletStatus.Normal)
             {
-                Status = (ToiletStatus)UnityEngine.Random.Range(1,3);
+                Status = (ToiletStatus)UnityEngine.Random.Range(1,4);
                 ToiletStatusChange.Invoke(Status, gameObject.GetInstanceID());
                 Debug.Log($"{gameObject.name}-{Status}");
             }
