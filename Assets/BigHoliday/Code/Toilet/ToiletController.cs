@@ -11,9 +11,11 @@ namespace BigHoliday
 
         private IToiletManager _toiletManager;
         private Dictionary<ToiletView, GameObject> _toilets;
-        private Dictionary<int, SpriteRenderer> _toiletNotiffications;
+        private Dictionary<int, List<SpriteRenderer>> _toiletNotiffications;
+        private Dictionary<int, ToiletView> _toiletViews;
 
         private int _currentPlayerToiletID;
+        private Sprite _statusSprite;
 
         #endregion
 
@@ -22,8 +24,10 @@ namespace BigHoliday
 
         internal ToiletController(IToiletManager toiletManager, List<GameObject> toilets)
         {
-            _toilets = new Dictionary<ToiletView, GameObject>(); 
-            _toiletNotiffications = new Dictionary<int, SpriteRenderer>();
+            _toilets = new Dictionary<ToiletView, GameObject>();
+            _toiletNotiffications = new Dictionary<int, List<SpriteRenderer>>();
+            _toiletViews = new Dictionary<int, ToiletView>(); 
+
             _toiletManager = toiletManager;
             _toiletManager.ToolInteract += PlayerInteraction;
 
@@ -33,17 +37,26 @@ namespace BigHoliday
                 if (toiletView)
                 {
                     _toilets.Add(toiletView, toilet);
+                    _toiletViews.Add(toilet.GetInstanceID(), toiletView);
                     toiletView.ContactedToilet += PlayerOnToilet;
                     toiletView.ToiletStatusChange += ChangeStatus;
                 }
 
-
-                toilet.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out var spriteRenderer);
-                if (spriteRenderer)
+                for (int i = 0; i < toilet.transform.childCount; i++)
                 {
-                    spriteRenderer.sprite = Resources.Load<Sprite>("world_bubble");
-                    spriteRenderer.enabled = false;
-                    _toiletNotiffications.Add(toilet.GetInstanceID(), spriteRenderer);
+                    toilet.transform.GetChild(i).TryGetComponent<SpriteRenderer>(out var spriteRenderer);
+                    if (spriteRenderer)
+                    {
+                        spriteRenderer.sprite = Resources.Load<Sprite>("world_bubble");
+                        spriteRenderer.enabled = false;
+
+                        if (!_toiletNotiffications.ContainsKey(toilet.GetInstanceID()))
+                        {
+                            _toiletNotiffications.Add(toilet.GetInstanceID(), new List<SpriteRenderer>());
+                        }
+                        _toiletNotiffications[toilet.GetInstanceID()].Add(spriteRenderer);
+
+                    }
                 }
             }
         }
@@ -60,14 +73,57 @@ namespace BigHoliday
 
         private void PlayerInteraction(byte toolID)
         {
-
+            if (!_currentPlayerToiletID.Equals(0))
+            {
+                var activeToiletStatus = _toiletViews[_currentPlayerToiletID].Status;
+                switch (toolID)
+                {
+                    case 1:
+                        if (activeToiletStatus.Equals(ToiletStatus.Broken)) _toiletViews[_currentPlayerToiletID].RestoreStatus();
+                        break;
+                    case 2:
+                        if (activeToiletStatus.Equals(ToiletStatus.Dirty)) _toiletViews[_currentPlayerToiletID].RestoreStatus();
+                        break;
+                    case 3:
+                        if (activeToiletStatus.Equals(ToiletStatus.Empty)) _toiletViews[_currentPlayerToiletID].RestoreStatus();
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void ChangeStatus(ToiletStatus status, int ID)
         {
+            switch (status)
+            {
+                case ToiletStatus.Normal:
+                    break;
+                case ToiletStatus.Dirty:
+                    _statusSprite = Resources.Load<Sprite>("vantuz");
+                    break;
+                case ToiletStatus.Broken:
+                    _statusSprite = Resources.Load<Sprite>("key");
+                    break;
+                case ToiletStatus.Empty:
+                    _statusSprite = Resources.Load<Sprite>("paper");
+                    break;
+                default:
+                    break;
+            }
             if (_toiletNotiffications.ContainsKey(ID))
             {
-                _toiletNotiffications[ID].enabled = true;
+                if (!status.Equals(ToiletStatus.Normal))
+                {
+                    _toiletNotiffications[ID][0].enabled = true;
+                    _toiletNotiffications[ID][1].sprite = _statusSprite;
+                    _toiletNotiffications[ID][1].enabled = true;
+                }
+                else
+                {
+                    _toiletNotiffications[ID][0].enabled = false;
+                    _toiletNotiffications[ID][1].enabled = false;
+                }
             }
         }
 

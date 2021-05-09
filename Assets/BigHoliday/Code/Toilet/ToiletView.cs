@@ -8,8 +8,9 @@ namespace BigHoliday
     public sealed class ToiletView : MonoBehaviour
     {
         #region Fields
-
+        
         private float _timeToEvent;
+        private System.Random _random;
 
         #endregion
 
@@ -27,12 +28,9 @@ namespace BigHoliday
 
         private void Awake()
         {
-            _timeToEvent = UnityEngine.Random.Range(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
+            _random = new System.Random();
+            _timeToEvent = _random.Next(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
             Status = ToiletStatus.Normal;
-        }
-
-        private void Update()
-        {
             InvokeRepeating("ChangeStatus", _timeToEvent, 10.0f);
         }
 
@@ -63,8 +61,15 @@ namespace BigHoliday
             {
                 Status = (ToiletStatus)UnityEngine.Random.Range(1,3);
                 ToiletStatusChange.Invoke(Status, gameObject.GetInstanceID());
+                Debug.Log($"{gameObject.name}-{Status}");
             }
             _timeToEvent = UnityEngine.Random.Range(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
+        }
+
+        internal void RestoreStatus()
+        {
+            Status = ToiletStatus.Normal;
+            ToiletStatusChange.Invoke(Status, gameObject.GetInstanceID());
         }
 
         #endregion

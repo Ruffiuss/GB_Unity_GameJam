@@ -9,7 +9,7 @@ namespace BigHoliday
     {
         #region Fields
 
-        private GameObject _playerView;
+        private GameObject _playerProvider;
         private SpriteRenderer _toolSpriteRenderer;
         private Vector3 _leftScale;
         private Vector3 _rightScale;
@@ -35,18 +35,20 @@ namespace BigHoliday
 
         #region ClassLifeCycles
 
-        internal PlayerController(GameObject playerView, Dictionary<string, Sprite> toolSprites)
+        internal PlayerController(GameObject provider, Dictionary<string, Sprite> toolSprites)
         {
-            _playerView = playerView;
-            _rightScale = playerView.transform.localScale;
+            _playerProvider = provider;
+
+            _rightScale = provider.transform.localScale;
             _leftScale = new Vector3(_rightScale.x * -1, _rightScale.y, _rightScale.z);
 
-            _playerView.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
+
+            _playerProvider.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
             if (spriteRenderer) SpriteRenderer = spriteRenderer;
 
             IsLooped = true;
 
-            _playerView.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out var toolSpriteRenderer);
+            _playerProvider.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out var toolSpriteRenderer);
             if (toolSpriteRenderer) _toolSpriteRenderer = toolSpriteRenderer;
 
             _toolSprites = toolSprites;
@@ -69,31 +71,40 @@ namespace BigHoliday
             if (Mathf.Abs(xAxisInput) > _movingThreshold)
             {
                 if (OnStateChange != null) OnStateChange.Invoke(AnimState.Walk);
-                _playerView.transform.Translate((Vector3.right * fixedDeltaTime * GameSettings.PLAYER_WALK_SPEED) * (xAxisInput < 0 ? -1 : 1));
-                _playerView.transform.localScale = (xAxisInput < 0 ? _leftScale : _rightScale);
+                _playerProvider.transform.Translate((Vector3.right * fixedDeltaTime * GameSettings.PLAYER_WALK_SPEED) * (xAxisInput < 0 ? -1 : 1));
+                _playerProvider.transform.localScale = (xAxisInput < 0 ? _leftScale : _rightScale);
             }
             else if (OnStateChange != null) OnStateChange.Invoke(AnimState.Idle);
         }
 
         private void Interaction()
-        {
-            if (_isInToolArea)
+        {            
+            if (Input.GetKeyDown(GameSettings.PLAYER_TOOL1))
             {
-                if (Input.GetKeyDown(GameSettings.PLAYER_TOOL1))
+                if (_isInToolArea)
                 {
                     _toolSpriteRenderer.sprite = _toolSprites["key"];
                     CurrentTool = 1;
                 }
-                if (Input.GetKeyDown(GameSettings.PLAYER_TOOL2))
+                else ToolInteract.Invoke(CurrentTool);
+            }
+            if (Input.GetKeyDown(GameSettings.PLAYER_TOOL2))
+            {
+                if (_isInToolArea)
                 {
                     _toolSpriteRenderer.sprite = _toolSprites["vantuz"];
                     CurrentTool = 2;
                 }
-                if (Input.GetKeyDown(GameSettings.PLAYER_TOOL3))
+                else ToolInteract.Invoke(CurrentTool);
+            }
+            if (Input.GetKeyDown(GameSettings.PLAYER_TOOL3))
+            {
+                if (_isInToolArea)
                 {
                     _toolSpriteRenderer.sprite = _toolSprites["paper"];
                     CurrentTool = 3;
                 }
+                else ToolInteract.Invoke(CurrentTool);
             }
         }
 
