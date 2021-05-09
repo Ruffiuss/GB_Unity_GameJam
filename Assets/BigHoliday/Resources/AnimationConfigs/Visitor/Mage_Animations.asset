@@ -14,11 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sequence:
   - State: 0
-    AnimationSpeed: 20
+    AnimationSpeed: 15
     Sprites:
-    - {fileID: 21300000, guid: 29a440df1810917478c78dc99d2e41eb, type: 3}
-    - {fileID: 21300000, guid: ac910a4e553b5ce43b33ee14dcf456ac, type: 3}
-    - {fileID: 21300000, guid: f2fe2e4f5f2c63d4f8164e4d96f4b0d9, type: 3}
     - {fileID: 21300000, guid: df658a412de80df46add0126676455d4, type: 3}
     - {fileID: 21300000, guid: 6fc5a405387946e4b916a79437149412, type: 3}
     - {fileID: 21300000, guid: c04ba23a0250f4444a5743ce87b4bb01, type: 3}
@@ -34,7 +31,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: b276aa0b36604e041a4050110ee41eb7, type: 3}
     - {fileID: 21300000, guid: f150b865ae39bcc479499c6a3490d030, type: 3}
   - State: 1
-    AnimationSpeed: 55
+    AnimationSpeed: 15
     Sprites:
     - {fileID: 21300000, guid: 4a6883dda635825479e1ce4b0055a4cb, type: 3}
     - {fileID: 21300000, guid: 2ef33bc7d26c60a42beecb25558f02a2, type: 3}
@@ -45,7 +42,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: c88a985080e7f7f4eaa6aac22af87db0, type: 3}
     - {fileID: 21300000, guid: f539a3c5d08dc8a4eb1d1de516bc060e, type: 3}
   - State: 2
-    AnimationSpeed: 120
+    AnimationSpeed: 55
     Sprites:
     - {fileID: 21300000, guid: 484dedcb6c3d6fb4cb3392520e10a323, type: 3}
     - {fileID: 21300000, guid: 7c0155b2e2b419a4daf51f516d5ff2c1, type: 3}
