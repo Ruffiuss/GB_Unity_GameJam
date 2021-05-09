@@ -32,12 +32,24 @@ namespace BigHoliday
         #endregion
 
 
+        #region UnityMethods
+
+        private void Update()
+        {
+            foreach (var key in _animationControllers.Keys)
+            {
+                _animationControllers[key].Update(Time.deltaTime);
+            }
+        }
+
+        #endregion
+
+
         #region Methods
 
         private void SpawnVisitor()
         {
             var animatipnConfigIndex = _random.Next(0, _animationConfigs.Count);
-            Debug.Log($"Count:{_animationConfigs.Count}|GeneratedIndex:{animatipnConfigIndex}");
             var spawnedVisitor = Instantiate(_visitorTemplate, _spawnTransform);
 
             spawnedVisitor.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
@@ -52,6 +64,7 @@ namespace BigHoliday
                 spawnedVisitor.GetComponent<VisitorAnimation>(),
                 new SpriteAnimController(_animationConfigs[animatipnConfigIndex], spawnedVisitor.GetComponent<VisitorAnimation>()
                     ));
+            spawnedVisitor.GetComponent<VisitorAnimation>().ChangeState(AnimState.Idle);
         }
 
         #endregion
