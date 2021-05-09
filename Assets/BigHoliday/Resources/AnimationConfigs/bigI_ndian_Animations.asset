@@ -30,3 +30,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 03b67f241548d4186962454e7d77319b, type: 3}
     - {fileID: 21300000, guid: 0a84801a34ab34aafaf3faef3faf0b77, type: 3}
     - {fileID: 21300000, guid: 4b6dfa6bec513458ebb2b19d8d053e5a, type: 3}
+  - State: 0
+    AnimationSpeed: 10
+    Sprites:
+    - {fileID: 21300000, guid: 170d6739516a92843840f4020ca51ec4, type: 3}
+    - {fileID: 21300000, guid: c777f01c2bf4d094b97bcc2a9b062fc6, type: 3}

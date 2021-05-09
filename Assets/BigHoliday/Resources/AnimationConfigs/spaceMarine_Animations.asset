@@ -45,3 +45,8 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 03b67f241548d4186962454e7d77319b, type: 3}
     - {fileID: 21300000, guid: 0a84801a34ab34aafaf3faef3faf0b77, type: 3}
     - {fileID: 21300000, guid: 4b6dfa6bec513458ebb2b19d8d053e5a, type: 3}
+  - State: 0
+    AnimationSpeed: 55
+    Sprites:
+    - {fileID: 21300000, guid: d692dcc7ef4854bb0b35411f364a7914, type: 3}
+    - {fileID: 21300000, guid: bc1f77aa0c7f8de49bebcc14a602fab2, type: 3}
