@@ -65,13 +65,13 @@ namespace BigHoliday
             Interaction();
         }
 
-        private void Movement(float fixedDeltaTime)
+        private void Movement(float deltaTime)
         {
             var xAxisInput = Input.GetAxis("Horizontal");
             if (Mathf.Abs(xAxisInput) > _movingThreshold)
             {
                 if (OnStateChange != null) OnStateChange.Invoke(AnimState.Walk);
-                _playerProvider.transform.Translate((Vector3.right * fixedDeltaTime * GameSettings.PLAYER_WALK_SPEED) * (xAxisInput < 0 ? -1 : 1));
+                _playerProvider.transform.Translate((Vector3.right * deltaTime * GameSettings.PLAYER_WALK_SPEED) * (xAxisInput < 0 ? -1 : 1));
                 _playerProvider.transform.localScale = (xAxisInput < 0 ? _leftScale : _rightScale);
             }
             else if (OnStateChange != null) OnStateChange.Invoke(AnimState.Idle);
