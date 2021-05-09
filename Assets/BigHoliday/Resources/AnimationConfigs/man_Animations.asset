@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef485d0d9b86db4798f6e6bd5b44ed5, type: 3}
+  m_Name: man_Animations
+  m_EditorClassIdentifier: 
+  Sequence:
+  - State: 0
+    AnimationSpeed: 10
+    Sprites:
+    - {fileID: 21300000, guid: bfd100d518c5e714494d92d5403085c1, type: 3}
+    - {fileID: 21300000, guid: 1d17e6cee7214634cb163d2e3f5eeb19, type: 3}
+    - {fileID: 21300000, guid: b5e24a70180e83d48954b3647d55736c, type: 3}
+    - {fileID: 21300000, guid: ddfe9ee06fbf43748816d394ea3fa7f3, type: 3}
+    - {fileID: 21300000, guid: 177c8f226c615594cbd916a84316e8d5, type: 3}
+    - {fileID: 21300000, guid: 1fac41745c4ca0d47aea42f6676fae31, type: 3}
+    - {fileID: 21300000, guid: 93a3a8de8c3d2d44a93b1bc2ce2a1932, type: 3}
+    - {fileID: 21300000, guid: 91a7873eb2090da47b99ae1dda25ffcc, type: 3}
+    - {fileID: 21300000, guid: 995f74a87b4651847bf014a207d685f8, type: 3}
+    - {fileID: 21300000, guid: 499e69b1e0f925d4eb6e65099cdc0d58, type: 3}
+    - {fileID: 21300000, guid: a16079d33be6c81478125d41687369b0, type: 3}
+    - {fileID: 21300000, guid: 628191f8d8dea234bb12dd301b85f5fb, type: 3}
+  - State: 1
+    AnimationSpeed: 55
+    Sprites:
+    - {fileID: 21300000, guid: fa93a146d68013d4f8cdc1a960e2fa03, type: 3}
+    - {fileID: 21300000, guid: c94341cc14904af4a82ae607d3fd8f26, type: 3}
+    - {fileID: 21300000, guid: ea926d87abf172e48ba62e9519b6d56a, type: 3}
+    - {fileID: 21300000, guid: 6f7cee5ff303e274eb57fe0774cfd780, type: 3}
+    - {fileID: 21300000, guid: e34a834971da60a4bb16c88f272abf27, type: 3}
+    - {fileID: 21300000, guid: 19dbb70575ca65c47ae497ef881924bd, type: 3}
+    - {fileID: 21300000, guid: db6ea0afb1552ef4986ef23a103bcceb, type: 3}
+    - {fileID: 21300000, guid: c5c2aa2e5f345d049a5a8438ac113ce3, type: 3}
+    - {fileID: 21300000, guid: 71403dbb8f0fcec47af2a271eb6c792d, type: 3}
+  - State: 2
+    AnimationSpeed: 110
+    Sprites:
+    - {fileID: 21300000, guid: 1afa40c36c500d24ab0b5a338b1ad902, type: 3}
+    - {fileID: 21300000, guid: e88d8ca68c295304aaadb53d5bcf85ba, type: 3}
+    - {fileID: 21300000, guid: 6e2b8bfb007c9074aba5bdfdd55c3d14, type: 3}
+    - {fileID: 21300000, guid: 5a69258a36eabec4189d61c242aad879, type: 3}
+    - {fileID: 21300000, guid: 5511c521c8778f24fa3cd18df12f2d7f, type: 3}
+    - {fileID: 21300000, guid: 5ea6f172e926070408cb357199a15f6c, type: 3}
+    - {fileID: 21300000, guid: 89da639ac069d9c46a8d266d6b73cf35, type: 3}
