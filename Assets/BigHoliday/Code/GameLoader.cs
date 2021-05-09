@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 namespace BigHoliday
@@ -11,12 +12,15 @@ namespace BigHoliday
         [SerializeField] internal GameObject Player;
         [SerializeField] internal string AnimationConfigsPath = "AnimationConfigs";
         [SerializeField] internal string PlayerAnimationConfigPath;
-        [SerializeField] internal List<ColliderProvider> Colliders;
+        [SerializeField] internal ToolsView ToolsView;
+        [SerializeField] internal Text ToolsTip;
+        [SerializeField] internal List<string> ToolSpriteNames;
 
         private ResourceLoader _resourceLoader;
         private Controllers _controllers;
         private SpriteAnimController _playerAnimController;
         private PlayerController _playerController;
+        private ToolsController _toolsController;
 
         private float _deltaTime;
         private float _fixedDeltaTime;
@@ -31,11 +35,19 @@ namespace BigHoliday
             _resourceLoader = new ResourceLoader();
             _controllers = new Controllers();
 
-            _playerController = new PlayerController(Player);
+            var toolSprites = new Dictionary<string, Sprite>();
+            foreach (var spriteName in ToolSpriteNames)
+            {
+                toolSprites.Add(spriteName, _resourceLoader.LoadSprite(spriteName));
+            }
+
+            _playerController = new PlayerController(Player, toolSprites);
             _controllers.AddController(_playerController);
 
             _playerAnimController = new SpriteAnimController(_resourceLoader.LoadAnimConfig(AnimationConfigsPath + @"\" + PlayerAnimationConfigPath), _playerController);
             _controllers.AddController(_playerAnimController);
+
+            _toolsController = new ToolsController(ToolsView, _playerController, ToolsTip);
         }
 
         private void Update()
@@ -44,11 +56,11 @@ namespace BigHoliday
             _controllers.Update(_deltaTime);
         }
 
-        private void FixedUpdate()
-        {
-            _fixedDeltaTime = Time.fixedDeltaTime;
-            _controllers.FixedUpdate(_fixedDeltaTime);
-        }
+        //private void FixedUpdate()
+        //{
+        //    _fixedDeltaTime = Time.fixedDeltaTime;
+        //    _controllers.FixedUpdate(_fixedDeltaTime);
+        //}
 
         #endregion
     }

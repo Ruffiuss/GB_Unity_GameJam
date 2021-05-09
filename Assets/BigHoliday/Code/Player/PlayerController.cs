@@ -1,18 +1,23 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections.Generic;
 
 
 namespace BigHoliday
 {
-    internal sealed class PlayerController : IFixedUpdatable, IChangeableStates
+    internal sealed class PlayerController : IUpdatable, IChangeableStates, IContactListener
     {
         #region Fields
 
         private GameObject _playerView;
+        private SpriteRenderer _toolSpriteRenderer;
         private Vector3 _leftScale;
         private Vector3 _rightScale;
 
+        private Dictionary<string, Sprite> _toolSprites;
+
         private float _movingThreshold = 0.35f;
+        private bool _isInToolArea = false;
 
         #endregion
 
@@ -28,7 +33,7 @@ namespace BigHoliday
 
         #region ClassLifeCycles
 
-        internal PlayerController(GameObject playerView)
+        internal PlayerController(GameObject playerView, Dictionary<string, Sprite> toolSprites)
         {
             _playerView = playerView;
             _rightScale = playerView.transform.localScale;
@@ -36,6 +41,11 @@ namespace BigHoliday
             _playerView.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
             SpriteRenderer = spriteRenderer;
             IsLooped = true;
+
+            _playerView.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out var toolSpriteRenderer);
+            _toolSpriteRenderer = toolSpriteRenderer;
+
+            _toolSprites = toolSprites;
         }
 
         #endregion
@@ -43,9 +53,9 @@ namespace BigHoliday
 
         #region Methods
 
-        public void FixedUpdate(float fixedDeltaTime)
+        public void Update(float deltaTime)
         {
-            Movement(fixedDeltaTime);
+            Movement(deltaTime);
             Interaction();
         }
 
@@ -63,7 +73,26 @@ namespace BigHoliday
 
         private void Interaction()
         {
+            if (_isInToolArea)
+            {
+                if (Input.GetKeyDown(GameSettings.PLAYER_TOOL1))
+                {
+                    _toolSpriteRenderer.sprite = _toolSprites["key"];                    
+                }
+                if (Input.GetKeyDown(GameSettings.PLAYER_TOOL2))
+                {
+                    _toolSpriteRenderer.sprite = _toolSprites["vantuz"];
+                }
+                if (Input.GetKeyDown(GameSettings.PLAYER_TOOL3))
+                {
+                    _toolSpriteRenderer.sprite = _toolSprites["paper"];
+                }
+            }
+        }
 
+        public void ChageToolContactState(bool value)
+        {
+            _isInToolArea = value;
         }
 
         #endregion

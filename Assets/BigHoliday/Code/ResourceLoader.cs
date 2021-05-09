@@ -53,6 +53,16 @@ namespace BigHoliday
             else throw new System.Exception("Prefab not founded");
         }
 
+        internal Sprite LoadSprite(string path)
+        {
+            var sprite = Resources.Load<Sprite>(path);
+            if (sprite)
+            {
+                return sprite;
+            }
+            else throw new System.Exception("Sprite not founded");
+        }
+
         #endregion
     }
 }
