@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BigHoliday
 {
-    internal sealed class PlayerController : IUpdatable, IChangeableStates, IContactListener
+    internal sealed class PlayerController : IUpdatable, IChangeableStates, IContactListener, IToiletManager
     {
         #region Fields
 
@@ -27,6 +27,8 @@ namespace BigHoliday
         public SpriteRenderer SpriteRenderer { get; private set; }
         public event Action<AnimState> OnStateChange;
         public bool IsLooped { get; private set; }
+        public byte CurrentTool { get; private set; }
+        public event Action<byte> ToolInteract;
 
         #endregion
 
@@ -38,12 +40,14 @@ namespace BigHoliday
             _playerView = playerView;
             _rightScale = playerView.transform.localScale;
             _leftScale = new Vector3(_rightScale.x * -1, _rightScale.y, _rightScale.z);
+
             _playerView.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
-            SpriteRenderer = spriteRenderer;
+            if (spriteRenderer) SpriteRenderer = spriteRenderer;
+
             IsLooped = true;
 
             _playerView.transform.GetChild(0).TryGetComponent<SpriteRenderer>(out var toolSpriteRenderer);
-            _toolSpriteRenderer = toolSpriteRenderer;
+            if (toolSpriteRenderer) _toolSpriteRenderer = toolSpriteRenderer;
 
             _toolSprites = toolSprites;
         }
@@ -77,15 +81,18 @@ namespace BigHoliday
             {
                 if (Input.GetKeyDown(GameSettings.PLAYER_TOOL1))
                 {
-                    _toolSpriteRenderer.sprite = _toolSprites["key"];                    
+                    _toolSpriteRenderer.sprite = _toolSprites["key"];
+                    CurrentTool = 1;
                 }
                 if (Input.GetKeyDown(GameSettings.PLAYER_TOOL2))
                 {
                     _toolSpriteRenderer.sprite = _toolSprites["vantuz"];
+                    CurrentTool = 2;
                 }
                 if (Input.GetKeyDown(GameSettings.PLAYER_TOOL3))
                 {
                     _toolSpriteRenderer.sprite = _toolSprites["paper"];
+                    CurrentTool = 3;
                 }
             }
         }

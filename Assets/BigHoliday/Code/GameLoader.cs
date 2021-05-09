@@ -15,12 +15,14 @@ namespace BigHoliday
         [SerializeField] internal ToolsView ToolsView;
         [SerializeField] internal Text ToolsTip;
         [SerializeField] internal List<string> ToolSpriteNames;
+        [SerializeField] internal List<GameObject> Toilets;
 
         private ResourceLoader _resourceLoader;
         private Controllers _controllers;
         private SpriteAnimController _playerAnimController;
         private PlayerController _playerController;
         private ToolsController _toolsController;
+        private ToiletController _toiletController;
 
         private float _deltaTime;
         private float _fixedDeltaTime;
@@ -48,6 +50,8 @@ namespace BigHoliday
             _controllers.AddController(_playerAnimController);
 
             _toolsController = new ToolsController(ToolsView, _playerController, ToolsTip);
+
+            _toiletController = new ToiletController(_playerController, Toilets);
         }
 
         private void Update()
