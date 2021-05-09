@@ -11,10 +11,10 @@ namespace BigHoliday
         public const int RANDOM_EVENT_MAXVALUE = 10;
         public const int RANDOM_EVENT_REPEAT_RATE = 50;
         
-        public const string TOOLS_TIP_TEXT = "Key= Z, Vantuz = X, Paper = V";
+        public const string TOOLS_TIP_TEXT = "Key= Z, Vantuz = X, Paper = C";
 
         public const KeyCode PLAYER_TOOL1 = KeyCode.Z;
         public const KeyCode PLAYER_TOOL2 = KeyCode.X;
-        public const KeyCode PLAYER_TOOL3 = KeyCode.V;
+        public const KeyCode PLAYER_TOOL3 = KeyCode.C;
     }
 }
