@@ -12,7 +12,7 @@ namespace BigHoliday
         internal Transform SpawnPosition;
 
         private System.Random _random;
-        private Transform _targetToilet;
+        private Vector3 _targetToilet;
         private SpriteAnimController _animatorController;
 
         private Vector3 _leftScale = new Vector3(-1, 1, 0);
@@ -72,7 +72,7 @@ namespace BigHoliday
 
         #region Methods
 
-        public void SetupDestination(Transform destination)
+        public void SetupDestination(Vector3 destination)
         {
             _targetToilet = destination;
             CurrentState = VisitorState.Coming;
@@ -86,8 +86,9 @@ namespace BigHoliday
 
         private void Move(Vector3 scaleSide, float deltaTime)
         {
-            var distance = Vector2.Distance(transform.position, _targetToilet.position);
-            if (distance > 0.1f)
+            var distance = Vector2.Distance(transform.position, _targetToilet);
+            Debug.Log(distance);
+            if (distance > 0.2f)
             {
                 transform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED) * scaleSide.x);
                 transform.localScale = scaleSide;

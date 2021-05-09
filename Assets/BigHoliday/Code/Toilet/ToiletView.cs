@@ -40,6 +40,10 @@ namespace BigHoliday
             {
                 ContactedToilet.Invoke(gameObject.GetInstanceID());
             }
+            if (collision.CompareTag("Visitor"))
+            {
+                Debug.Log($"{collision.GetInstanceID()} entred to {gameObject.GetInstanceID()}");
+            }
         }
 
         private void OnTriggerExit2D(Collider2D collision)
@@ -47,6 +51,10 @@ namespace BigHoliday
             if (collision.CompareTag("Player"))
             {
                 ContactedToilet.Invoke(0);
+            }
+            if (collision.CompareTag("Visitor"))
+            {
+                Debug.Log($"{collision.GetInstanceID()} escaped from {gameObject.GetInstanceID()}");
             }
         }
 

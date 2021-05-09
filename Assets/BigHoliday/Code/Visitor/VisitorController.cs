@@ -12,7 +12,8 @@ namespace BigHoliday
         private GameObject _visitorTemplate;
         private Transform _spawnTransform;
         private Queue<GameObject> _visitorsQueue;
-        private Queue<Transform> _toiletsQueue;
+        private Queue<Vector3> _toiletsQueue;
+        private Dictionary<int, Vector3> _toiletDictionary;
 
         private float _spawnDelay = 10.0f;
         private float _timePassed = 0.0f;
@@ -23,13 +24,19 @@ namespace BigHoliday
 
         #region ClassLifeCycles
 
-        public VisitorController(List<Transform> toiletSpots, GameObject visitor, Transform spawnTransform)
+        public VisitorController(Dictionary<int, Vector3> toiletDictionary, GameObject visitor, Transform spawnTransform)
         {
+            _toiletDictionary = toiletDictionary;
             _spawnTransform = spawnTransform;
             _visitorTemplate = visitor;
             _visitorsQueue = new Queue<GameObject>();
-            _toiletsQueue = new Queue<Transform>(toiletSpots);
+            _toiletsQueue = new Queue<Vector3>();
 
+            foreach (var key in _toiletDictionary.Keys)
+            {
+                _toiletsQueue.Enqueue(_toiletDictionary[key]);
+            }
+            
             SpawnVisitor();
         }
 

@@ -16,7 +16,6 @@ namespace BigHoliday
         [SerializeField] internal Text ToolsTip;
         [SerializeField] internal List<string> ToolSpriteNames;
         [SerializeField] internal List<GameObject> Toilets;
-        [SerializeField] internal List<Transform> ToiletSpots;
         [SerializeField] internal Transform VisitorSpawnTransform;
 
         private ResourceLoader _resourceLoader;
@@ -56,7 +55,12 @@ namespace BigHoliday
 
             _toiletController = new ToiletController(_playerController, Toilets);
 
-            _visitorController = new VisitorController(ToiletSpots, _resourceLoader.LoadPrefab("Visitor"), VisitorSpawnTransform);
+            var toiletTransforms = new Dictionary<int, Vector3>();
+            foreach (var toilet in Toilets)
+            {
+                toiletTransforms.Add(toilet.GetInstanceID(), new Vector3(toilet.transform.position.x, toilet.transform.position.y - 0.3f, 0));
+            }
+            _visitorController = new VisitorController(toiletTransforms, _resourceLoader.LoadPrefab("Visitor"), VisitorSpawnTransform);
             _controllers.AddController(_visitorController);
         }
 
