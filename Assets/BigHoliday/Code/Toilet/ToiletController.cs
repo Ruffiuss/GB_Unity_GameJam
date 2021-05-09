@@ -69,6 +69,7 @@ namespace BigHoliday
         private void PlayerOnToilet(int ID)
         {
             _currentPlayerToiletID = ID;
+            Debug.Log(_currentPlayerToiletID);
         }
 
         private void PlayerInteraction(byte toolID)

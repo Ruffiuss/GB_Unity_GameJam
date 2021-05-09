@@ -31,7 +31,7 @@ namespace BigHoliday
             _random = new System.Random();
             _timeToEvent = _random.Next(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
             Status = ToiletStatus.Normal;
-            InvokeRepeating("ChangeStatus", _timeToEvent, 10.0f);
+            InvokeRepeating("ChangeStatus", _timeToEvent, GameSettings.RANDOM_EVENT_REPEAT_RATE);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)

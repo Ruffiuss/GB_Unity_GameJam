@@ -7,8 +7,9 @@ namespace BigHoliday
     {
         public const float PLAYER_WALK_SPEED = 5.0f;
 
-        public const int RANDOM_EVENT_MINVALUE = 10;
-        public const int RANDOM_EVENT_MAXVALUE = 30;
+        public const int RANDOM_EVENT_MINVALUE = 2;
+        public const int RANDOM_EVENT_MAXVALUE = 10;
+        public const int RANDOM_EVENT_REPEAT_RATE = 1;
         
         public const string TOOLS_TIP_TEXT = "Key= Z, Vantuz = X, Paper = V";
 
