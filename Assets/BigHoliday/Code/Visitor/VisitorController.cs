@@ -5,68 +5,31 @@ using UnityEngine;
 
 namespace BigHoliday
 {
-    public class VisitorController : MonoBehaviour
+    public class VisitorController : IUpdatable
     {
-        #region Fields
+        #region Fields   
 
-        public GameObject _visitorTemplate;
-        public Transform _spawnTransform;
-        public List<SpriteAnimatorConfig> _animationConfigs;
-        public List<Transform> _toiletTrasforms;
-
-        private System.Random _random;
-        private Queue<KeyValuePair<VisitorAnimation, SpriteAnimController>> _visitorsQueue;
+        private GameObject _visitorTemplate;
+        private Transform _spawnTransform;
+        private Queue<GameObject> _visitorsQueue;
         private Queue<Transform> _toiletsQueue;
-        private KeyValuePair<VisitorAnimation, SpriteAnimController> _activeVisitor;
-        private Transform _activeToilet;
 
-        private Vector3 _leftScale = new Vector3(-1, 1, 0);
-        private Vector3 _rightScale = new Vector3(1, 1, 0);
-
-        private bool _isVisitorComing = false;
-        private bool _isArrived = false;
-        private bool _isDone = false;
+        private float _spawnDelay = 10.0f;
+        private float _timePassed = 0.0f;
 
         #endregion
 
 
-        #region MyRegion
+        #region ClassLifeCycles
 
-        private void Awake()
+        public VisitorController(List<Transform> toiletSpots, GameObject visitor, Transform spawnTransform)
         {
-            _random = new System.Random();
+            _spawnTransform = spawnTransform;
+            _visitorTemplate = visitor;
+            _visitorsQueue = new Queue<GameObject>();
+            _toiletsQueue = new Queue<Transform>(toiletSpots);
 
-            _visitorsQueue = new Queue<KeyValuePair<VisitorAnimation, SpriteAnimController>>();
-            _toiletsQueue = new Queue<Transform>(_toiletTrasforms);
-
-            InvokeRepeating("SpawnVisitor", 0, 25);
-        }
-
-        #endregion
-
-
-        #region UnityMethods
-
-        private void Update()
-        {
-            if (!_isVisitorComing)
-            {
-                _activeVisitor = _visitorsQueue.Peek();
-                _visitorsQueue.Dequeue();
-                _activeToilet = _toiletsQueue.Peek();
-                _toiletsQueue.Dequeue();
-                _isVisitorComing = true;
-                _activeVisitor.Key.ChangeState(AnimState.Walk);
-            }
-            else if(!_isArrived)
-            {
-                MoveVisitor(_activeVisitor.Key.transform, _activeToilet, Time.deltaTime);
-                _activeVisitor.Value.Update(Time.deltaTime);
-            }
-            else
-            {
-                _activeVisitor.Key.ChangeState(AnimState.Idle);
-            }
+            SpawnVisitor();
         }
 
         #endregion
@@ -74,41 +37,26 @@ namespace BigHoliday
 
         #region Methods
 
+        public void Update(float deltaTime)
+        {
+            _timePassed += deltaTime;
+            if (_timePassed > _spawnDelay)
+            {
+                _timePassed = 0.0f;
+                SpawnVisitor();
+            }
+        }
+
         private void SpawnVisitor()
         {
-
-            var animatipnConfigIndex = _random.Next(0, _animationConfigs.Count);
-            var spawnedVisitor = Instantiate(_visitorTemplate, _spawnTransform);
-
-            spawnedVisitor.TryGetComponent<SpriteRenderer>(out var spriteRenderer);
-            if (spriteRenderer)
+            if (_visitorsQueue.Count < 20)
             {
-                var animation = spawnedVisitor.AddComponent<VisitorAnimation>();
-                animation.SetupAnimation(spriteRenderer, true);
-            }
-            else throw new Exception($"{spawnedVisitor.name} doesen`t have SpriteRenderer");
-
-            _visitorsQueue.Enqueue(new KeyValuePair<VisitorAnimation, SpriteAnimController>(
-                spawnedVisitor.GetComponent<VisitorAnimation>(),
-                new SpriteAnimController(_animationConfigs[animatipnConfigIndex], spawnedVisitor.GetComponent<VisitorAnimation>()
-                    )));
-            spawnedVisitor.GetComponent<VisitorAnimation>().ChangeState(AnimState.Idle);
-        }
-
-        private void MoveVisitor(Transform visitorTransform, Transform toiletTransform, float deltaTime)
-        {
-            var distance = Vector2.Distance(visitorTransform.position, toiletTransform.position);
-            if (distance > 0.1f)
-            {
-                visitorTransform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED) * (_isDone ? 1 : -1));
-                visitorTransform.localScale = _isDone ? _rightScale : _leftScale;
-            }
-            else
-            {
-                _isArrived = true;
+                var spawnedVisitor = GameObject.Instantiate(_visitorTemplate, _spawnTransform) as GameObject;
+                _visitorsQueue.Enqueue(spawnedVisitor);
+                var visitor = spawnedVisitor.AddComponent<Visitor>();
+                visitor.SetupDestination(_toiletsQueue.Dequeue());
             }
         }
-
 
         #endregion
     }

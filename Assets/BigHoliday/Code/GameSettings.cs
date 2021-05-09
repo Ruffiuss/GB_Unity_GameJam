@@ -6,7 +6,7 @@ namespace BigHoliday
     public static class GameSettings
     {
         public const float PLAYER_WALK_SPEED = 5.0f;
-        public const float VISITOR_WALK_SPEED = 5.0f;
+        public const float VISITOR_WALK_SPEED = 2.0f;
 
         public const int RANDOM_EVENT_MINVALUE = 2;
         public const int RANDOM_EVENT_MAXVALUE = 5;
