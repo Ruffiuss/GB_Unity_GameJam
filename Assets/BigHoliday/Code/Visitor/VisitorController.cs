@@ -5,19 +5,29 @@ using UnityEngine;
 
 namespace BigHoliday
 {
-    public class VisitorController : IUpdatable
+    public class VisitorController : IUpdatable, IVisitorEvents
     {
         #region Fields   
 
         private GameObject _visitorTemplate;
         private Transform _spawnTransform;
         private Queue<GameObject> _visitorsQueue;
-        private Queue<Vector3> _toiletsQueue;
+        private Queue<Vector3> _freeToilets;
         private Dictionary<int, Vector3> _toiletDictionary;
+        private Stack<Vector3> _busyToilets;
 
         private float _spawnDelay = 10.0f;
-        private float _timePassed = 0.0f;
+        private float _inToiletTime = GameSettings.VISITOR_IN_TOILET_TIME;
+        private float _spawnTimePassed = 0.0f;
+        private float _toiletTimePassed = 0.0f;
         private bool _haveFreeSpots = true;
+
+        #endregion
+
+
+        #region Properties
+
+        public event Func<int, bool> CheckToilet;
 
         #endregion
 
@@ -30,11 +40,12 @@ namespace BigHoliday
             _spawnTransform = spawnTransform;
             _visitorTemplate = visitor;
             _visitorsQueue = new Queue<GameObject>();
-            _toiletsQueue = new Queue<Vector3>();
+            _freeToilets = new Queue<Vector3>();
+            _busyToilets = new Stack<Vector3>();
 
             foreach (var key in _toiletDictionary.Keys)
             {
-                _toiletsQueue.Enqueue(_toiletDictionary[key]);
+                _freeToilets.Enqueue(_toiletDictionary[key]);
             }
             
             SpawnVisitor();
@@ -47,18 +58,53 @@ namespace BigHoliday
 
         public void Update(float deltaTime)
         {
-            _timePassed += deltaTime;
-            if (_timePassed > _spawnDelay)
+            _spawnTimePassed += deltaTime;
+            if (_spawnTimePassed > _spawnDelay)
             {
-                _timePassed = 0.0f;
+                _spawnTimePassed = 0.0f;
 
                 if (_haveFreeSpots) SpawnVisitor();
             }
 
             foreach (var visitor in _visitorsQueue)
             {
-                Debug.Log($"{visitor.GetInstanceID()}-{visitor.GetComponent<Visitor>().CurrentState}");
+                // Debug.Log($"{visitor.GetInstanceID()}-{visitor.GetComponent<Visitor>().CurrentState}");
+                var visitorsView = visitor.GetComponent<Visitor>();
+                switch (visitorsView.CurrentState)
+                {
+                    case VisitorState.Waiting:
+                        break;
+                    case VisitorState.Coming:
+                        break;
+                    case VisitorState.Arrived:
+                        if (CheckToilet.Invoke(visitor.GetInstanceID()))
+                        {
+                            _toiletTimePassed += deltaTime;
+                            visitor.GetComponent<SpriteRenderer>().enabled = false;
+                            if (_toiletTimePassed > _inToiletTime)
+                            {
+                                _toiletTimePassed = 0.0f;
+                                VisitorDone(visitor);
+                            }
+                        }
+                        break;
+                    case VisitorState.Done:
+                        break;
+                    case VisitorState.Escaped:
+                        //_freeToilets.Enqueue(_busyToilets.Pop());
+                        //_visitorsQueue.Dequeue();
+                        break;
+                    default:
+                        break;
+                }
             }
+        }
+
+        private void VisitorDone(GameObject visitor)
+        {
+            visitor.GetComponent<Visitor>().ChangeState(VisitorState.Done);
+            visitor.GetComponent<Visitor>().SetupDestination(_spawnTransform.position);
+            visitor.GetComponent<SpriteRenderer>().enabled = true;
         }
 
         private void SpawnVisitor()
@@ -68,9 +114,10 @@ namespace BigHoliday
                 var spawnedVisitor = GameObject.Instantiate(_visitorTemplate, _spawnTransform) as GameObject;
                 _visitorsQueue.Enqueue(spawnedVisitor);
                 var visitor = spawnedVisitor.AddComponent<Visitor>();
-                if (!_toiletsQueue.Count.Equals(0))
+                if (!_freeToilets.Count.Equals(0))
                 {
-                    visitor.SetupDestination(_toiletsQueue.Dequeue());
+                    _busyToilets.Push(_freeToilets.Dequeue());
+                    visitor.SetupDestination(_busyToilets.Peek());
                 }
                 else _haveFreeSpots = false;
             }

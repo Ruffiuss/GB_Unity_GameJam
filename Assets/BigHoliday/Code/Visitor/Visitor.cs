@@ -12,9 +12,9 @@ namespace BigHoliday
         internal Transform SpawnPosition;
 
         private System.Random _random;
-        private Vector3 _targetToilet;
         private SpriteAnimController _animatorController;
-
+        private Rigidbody2D _rigidbody2D;
+        private Vector3 _movingTarget;
         private Vector3 _leftScale = new Vector3(-1, 1, 0);
         private Vector3 _rightScale = new Vector3(1, 1, 0);
 
@@ -37,6 +37,7 @@ namespace BigHoliday
         {
             IsLooped = true;
             SpriteRenderer = GetComponent<SpriteRenderer>();
+            _rigidbody2D = GetComponent<Rigidbody2D>();
             _random = new System.Random();
 
             var configs = Resources.LoadAll<SpriteAnimatorConfig>(@"AnimationConfigs\Visitor");
@@ -45,6 +46,8 @@ namespace BigHoliday
             _animatorController = new SpriteAnimController(config, this);
 
             OnStateChange.Invoke(AnimState.Idle);
+
+            _rigidbody2D.simulated = false;
         }
 
         private void Update()
@@ -59,6 +62,7 @@ namespace BigHoliday
                 case VisitorState.Arrived:
                     break;
                 case VisitorState.Done:
+                    Move(_rightScale, Time.deltaTime);
                     break;
                 case VisitorState.Escaped:
                     break;
@@ -74,29 +78,36 @@ namespace BigHoliday
 
         public void SetupDestination(Vector3 destination)
         {
-            _targetToilet = destination;
-            CurrentState = VisitorState.Coming;
+            _movingTarget = destination;
+            if (!CurrentState.Equals(VisitorState.Done)) CurrentState = VisitorState.Coming;
             OnStateChange.Invoke(AnimState.Walk);
         }
 
-        public void ChangeState(AnimState state)
+        public void ChangeState(VisitorState state)
         {
-            OnStateChange.Invoke(state);
+            CurrentState = state;
         }
 
         private void Move(Vector3 scaleSide, float deltaTime)
         {
-            var distance = Vector2.Distance(transform.position, _targetToilet);
-            Debug.Log(distance);
+            var distance = Vector2.Distance(transform.position, _movingTarget);
+            Debug.Log($"ScaleVector:{scaleSide}");
+            //Debug.Log(distance);
             if (distance > 0.2f)
             {
                 transform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED) * scaleSide.x);
                 transform.localScale = scaleSide;
             }
-            else
+            else if (!CurrentState.Equals(VisitorState.Done))
             {
+                _rigidbody2D.simulated = true;
                 CurrentState = VisitorState.Arrived;
                 OnStateChange.Invoke(AnimState.Idle);
+            }
+            else
+            {
+                CurrentState = VisitorState.Escaped;
+                Destroy(this, 1.0f);
             }
         }
 

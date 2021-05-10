@@ -62,6 +62,7 @@ namespace BigHoliday
             }
             _visitorController = new VisitorController(toiletTransforms, _resourceLoader.LoadPrefab("Visitor"), VisitorSpawnTransform);
             _controllers.AddController(_visitorController);
+            _toiletController.AddVisitorEvents(_visitorController);
         }
 
         private void Update()

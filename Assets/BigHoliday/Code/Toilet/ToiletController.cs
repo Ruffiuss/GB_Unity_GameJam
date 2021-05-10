@@ -10,9 +10,11 @@ namespace BigHoliday
         #region Fields
 
         private IToiletManager _toiletManager;
+        private IVisitorEvents _visitorEvents;
         private Dictionary<ToiletView, GameObject> _toilets;
         private Dictionary<int, List<SpriteRenderer>> _toiletNotiffications;
         private Dictionary<int, ToiletView> _toiletViews;
+        private List<int> _approwedVisitors;
 
         private int _currentPlayerToiletID;
         private Sprite _statusSprite;
@@ -26,7 +28,8 @@ namespace BigHoliday
         {
             _toilets = new Dictionary<ToiletView, GameObject>();
             _toiletNotiffications = new Dictionary<int, List<SpriteRenderer>>();
-            _toiletViews = new Dictionary<int, ToiletView>(); 
+            _toiletViews = new Dictionary<int, ToiletView>();
+            _approwedVisitors = new List<int>();
 
             _toiletManager = toiletManager;
             _toiletManager.ToolInteract += PlayerInteraction;
@@ -38,7 +41,7 @@ namespace BigHoliday
                 {
                     _toilets.Add(toiletView, toilet);
                     _toiletViews.Add(toilet.GetInstanceID(), toiletView);
-                    toiletView.ContactedToilet += PlayerOnToilet;
+                    toiletView.ContactedToilet += ToiletContacted;
                     toiletView.ToiletStatusChange += ChangeStatus;
                 }
 
@@ -55,7 +58,6 @@ namespace BigHoliday
                             _toiletNotiffications.Add(toilet.GetInstanceID(), new List<SpriteRenderer>());
                         }
                         _toiletNotiffications[toilet.GetInstanceID()].Add(spriteRenderer);
-
                     }
                 }
             }
@@ -66,9 +68,41 @@ namespace BigHoliday
 
         #region Methods
 
-        private void PlayerOnToilet(int ID)
+        public void AddVisitorEvents(IVisitorEvents visitorEvents)
         {
-            _currentPlayerToiletID = ID;
+            _visitorEvents = visitorEvents;
+            _visitorEvents.CheckToilet += RequestToilet;
+        }
+
+        private bool RequestToilet(int visitorID)
+        {
+            Debug.Log($"{visitorID} requested");
+            if (_approwedVisitors.Contains(visitorID))
+            {
+                Debug.Log($"{visitorID} can in");
+                return true;
+            }
+            else
+            {
+                Debug.Log($"{visitorID} cant");
+                return false;
+            }
+        }
+
+        private void ToiletContacted(int ID, string tag)
+        {
+            switch (tag)
+            {
+                case "Player":
+                    _currentPlayerToiletID = ID;
+                    break;
+                case "Visitor":
+                    Debug.Log($"Added {ID}");
+                    _approwedVisitors.Add(ID);
+                    break;
+                default:
+                    break;
+            }
             //Debug.Log(_currentPlayerToiletID);
         }
 
@@ -101,13 +135,13 @@ namespace BigHoliday
                 case ToiletStatus.Normal:
                     break;
                 case ToiletStatus.Dirty:
-                    _statusSprite = Resources.Load<Sprite>("vantuz");
+                    _statusSprite = Resources.Load<Sprite>("poop");
                     break;
                 case ToiletStatus.Broken:
-                    _statusSprite = Resources.Load<Sprite>("key");
+                    _statusSprite = Resources.Load<Sprite>("broken");
                     break;
                 case ToiletStatus.Empty:
-                    _statusSprite = Resources.Load<Sprite>("paper");
+                    _statusSprite = Resources.Load<Sprite>("paper_ended");
                     break;
                 default:
                     break;
