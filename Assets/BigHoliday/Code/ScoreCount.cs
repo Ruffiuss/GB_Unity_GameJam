@@ -1,16 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
-public class ScoreCount : MonoBehaviour
+namespace BigHoliday
 {
-     public int Score = 0;
-     public GameObject ScoreText;
+    public class ScoreCount : IUpdatable
+    {
+        #region Fields
 
-     public void Count()
-     {
-          Score++;
-          ScoreText.GetComponent<Text>().text = "Score: " + Score.ToString();
-     }
+        private Text _text;
+
+        #endregion
+
+
+        #region Properties
+
+        public int CurrentScore { get; private set; }
+
+        #endregion
+
+
+        #region ClassLifeCycles
+
+        public ScoreCount(Text text)
+        {
+            _text = text;
+        }
+
+        #endregion
+
+
+        #region Methods
+
+        public void Update(float deltaTime)
+        {
+            _text.text = $"Score: {CurrentScore}";
+        }
+
+        public void AddScore(int value)
+        {
+            CurrentScore += value;
+        }
+
+        #endregion
+    }
 }

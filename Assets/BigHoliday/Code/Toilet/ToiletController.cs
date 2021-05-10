@@ -15,9 +15,10 @@ namespace BigHoliday
         private Dictionary<int, List<SpriteRenderer>> _toiletNotiffications;
         private Dictionary<int, ToiletView> _toiletViews;
         private List<int> _approwedVisitors;
+        private Sprite _statusSprite;
+        private ScoreCount _score;
 
         private int _currentPlayerToiletID;
-        private Sprite _statusSprite;
 
         #endregion
 
@@ -68,6 +69,11 @@ namespace BigHoliday
 
         #region Methods
 
+        public void AddScoreSystem(ScoreCount score)
+        {
+            _score = score;
+        }
+
         public void AddVisitorEvents(IVisitorEvents visitorEvents)
         {
             _visitorEvents = visitorEvents;
@@ -115,12 +121,15 @@ namespace BigHoliday
                 {
                     case 1:
                         if (activeToiletStatus.Equals(ToiletStatus.Broken)) _toiletViews[_currentPlayerToiletID].RestoreStatus();
+                        _score.AddScore(1);
                         break;
                     case 2:
                         if (activeToiletStatus.Equals(ToiletStatus.Dirty)) _toiletViews[_currentPlayerToiletID].RestoreStatus();
+                        _score.AddScore(1);
                         break;
                     case 3:
                         if (activeToiletStatus.Equals(ToiletStatus.Empty)) _toiletViews[_currentPlayerToiletID].RestoreStatus();
+                        _score.AddScore(1);
                         break;
                     default:
                         break;

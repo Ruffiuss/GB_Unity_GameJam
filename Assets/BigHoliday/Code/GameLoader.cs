@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 
 namespace BigHoliday
-{  
+{
     internal sealed class GameLoader : MonoBehaviour
     {
         #region Fields
@@ -14,6 +14,7 @@ namespace BigHoliday
         [SerializeField] internal string PlayerAnimationConfigPath;
         [SerializeField] internal ToolsView ToolsView;
         [SerializeField] internal Text ToolsTip;
+        [SerializeField] internal Text Score;
         [SerializeField] internal List<string> ToolSpriteNames;
         [SerializeField] internal List<GameObject> Toilets;
         [SerializeField] internal Transform VisitorSpawnTransform;
@@ -25,6 +26,7 @@ namespace BigHoliday
         private ToolsController _toolsController;
         private ToiletController _toiletController;
         private VisitorController _visitorController;
+        private ScoreCount _scoreCount;
 
         private float _deltaTime;
         private float _fixedDeltaTime;
@@ -45,6 +47,9 @@ namespace BigHoliday
                 toolSprites.Add(spriteName, _resourceLoader.LoadSprite(spriteName));
             }
 
+            _scoreCount = new ScoreCount(Score);
+            _controllers.AddController(_scoreCount);
+
             _playerController = new PlayerController(Player, toolSprites);
             _controllers.AddController(_playerController);
 
@@ -54,6 +59,7 @@ namespace BigHoliday
             _toolsController = new ToolsController(ToolsView, _playerController, ToolsTip);
 
             _toiletController = new ToiletController(_playerController, Toilets);
+            _toiletController.AddScoreSystem(_scoreCount);
 
             var toiletTransforms = new Dictionary<int, Vector3>();
             foreach (var toilet in Toilets)
