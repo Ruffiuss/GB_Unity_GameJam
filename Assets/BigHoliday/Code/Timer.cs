@@ -9,9 +9,15 @@ public class Timer : MonoBehaviour
     public int minutesTimer = 15, secondsTimer;
 
     private DateTime timer = new DateTime();
-    private int minutesLeft, secondsLeft;
+    private Text _text;
 
+    private int minutesLeft, secondsLeft;
     private bool run = true;
+
+    private void Awake()
+    {
+        _text = gameObject.GetComponent<Text>();
+    }
 
     private void Update()
     {
@@ -26,11 +32,7 @@ public class Timer : MonoBehaviour
                 run = false;
             }
         }
-    }
-
-    private void OnGUI()
-    {
-        GUILayout.Label("Timer " + "Minutes " + minutesLeft + "Seconds " + secondsLeft);
+        _text.text = $"Timer: Minutes {minutesLeft} Seconds {secondsLeft}";
     }
 
     private void Empty()
