@@ -91,12 +91,13 @@ namespace BigHoliday
         private void Move(Vector3 scaleSide, float deltaTime)
         {
             var distance = Vector2.Distance(transform.position, _movingTarget);
-            Debug.Log($"ScaleVector:{scaleSide}");
+            //Debug.Log($"ScaleVector:{scaleSide}");
             //Debug.Log(distance);
             if (distance > 0.2f)
             {
                 transform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED) * scaleSide.x);
                 transform.localScale = scaleSide;
+                if (_rigidbody2D.simulated == true) _rigidbody2D.simulated = false;
             }
             else if (!CurrentState.Equals(VisitorState.Done))
             {
@@ -107,7 +108,7 @@ namespace BigHoliday
             else
             {
                 CurrentState = VisitorState.Escaped;
-                Destroy(this, 1.0f);
+                //Destroy(this, 1.0f);
             }
         }
 

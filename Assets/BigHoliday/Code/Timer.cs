@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using System;
+
 
 public class Timer : MonoBehaviour
 {
@@ -31,12 +30,13 @@ public class Timer : MonoBehaviour
                 Empty();
                 run = false;
             }
+            _text.text = $"Time left:{secondsLeft}";
         }
-        _text.text = $"Timer: Minutes {minutesLeft} Seconds {secondsLeft}";
     }
 
     private void Empty()
     {
-        Debug.Log("Time left");
+        Time.timeScale = 0;
+        _text.text = "Enought for today!";
     }
 }
