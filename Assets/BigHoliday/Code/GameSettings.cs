@@ -1,0 +1,22 @@
+﻿using UnityEngine;
+
+
+namespace BigHoliday
+{
+    public static class GameSettings
+    {
+        public const float PLAYER_WALK_SPEED = 5.0f;
+        public const float VISITOR_WALK_SPEED = 2.0f;
+        public const float VISITOR_IN_TOILET_TIME = 2.0f;
+
+        public const int RANDOM_EVENT_MINVALUE = 2;
+        public const int RANDOM_EVENT_MAXVALUE = 5;
+        public const int RANDOM_EVENT_REPEAT_RATE = 20;
+        
+        public const string TOOLS_TIP_TEXT = "Key= Z, Vantuz = X, Paper = C";
+
+        public const KeyCode PLAYER_TOOL1 = KeyCode.Z;
+        public const KeyCode PLAYER_TOOL2 = KeyCode.X;
+        public const KeyCode PLAYER_TOOL3 = KeyCode.C;
+    }
+}

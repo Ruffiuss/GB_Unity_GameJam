@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef485d0d9b86db4798f6e6bd5b44ed5, type: 3}
+  m_Name: girl_Animations
+  m_EditorClassIdentifier: 
+  Sequence:
+  - State: 0
+    AnimationSpeed: 5
+    Sprites:
+    - {fileID: 21300000, guid: 8b2efb42f6526b2439c7ee05c2f9dab0, type: 3}
+    - {fileID: 21300000, guid: ec190725927f41049bc8404977d0296b, type: 3}
+    - {fileID: 21300000, guid: 4db72edc849f63049bf6d27cd6dda441, type: 3}
+    - {fileID: 21300000, guid: ec190725927f41049bc8404977d0296b, type: 3}
+  - State: 1
+    AnimationSpeed: 20
+    Sprites:
+    - {fileID: 21300000, guid: b3ce0be4ca22aca42be4c424dae489bc, type: 3}
+    - {fileID: 21300000, guid: 2301b28127282144285d48a4b66c304a, type: 3}
+    - {fileID: 21300000, guid: d2e89f637d5bc6d40aa6091fd723f4e5, type: 3}
+    - {fileID: 21300000, guid: a35d23ef58036414a9c44791eae45284, type: 3}
+    - {fileID: 21300000, guid: 48e7a3691db092d44b76bb5fe03c7492, type: 3}
+  - State: 2
+    AnimationSpeed: 110
+    Sprites: []

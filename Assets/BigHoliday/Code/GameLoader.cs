@@ -1,0 +1,88 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+
+namespace BigHoliday
+{
+    internal sealed class GameLoader : MonoBehaviour
+    {
+        #region Fields
+
+        [SerializeField] internal GameObject Player;
+        [SerializeField] internal string AnimationConfigsPath = "AnimationConfigs";
+        [SerializeField] internal string PlayerAnimationConfigPath;
+        [SerializeField] internal ToolsView ToolsView;
+        [SerializeField] internal Text ToolsTip;
+        [SerializeField] internal Text Score;
+        [SerializeField] internal List<string> ToolSpriteNames;
+        [SerializeField] internal List<GameObject> Toilets;
+        [SerializeField] internal Transform VisitorSpawnTransform;
+
+        private ResourceLoader _resourceLoader;
+        private Controllers _controllers;
+        private SpriteAnimController _playerAnimController;
+        private PlayerController _playerController;
+        private ToolsController _toolsController;
+        private ToiletController _toiletController;
+        private VisitorController _visitorController;
+        private ScoreCount _scoreCount;
+
+        private float _deltaTime;
+        private float _fixedDeltaTime;
+
+        #endregion
+
+
+        #region UnityMethods
+
+        private void Awake()
+        {
+            _resourceLoader = new ResourceLoader();
+            _controllers = new Controllers();
+
+            var toolSprites = new Dictionary<string, Sprite>();
+            foreach (var spriteName in ToolSpriteNames)
+            {
+                toolSprites.Add(spriteName, _resourceLoader.LoadSprite(spriteName));
+            }
+
+            _scoreCount = new ScoreCount(Score);
+            _controllers.AddController(_scoreCount);
+
+            _playerController = new PlayerController(Player, toolSprites);
+            _controllers.AddController(_playerController);
+
+            _playerAnimController = new SpriteAnimController(_resourceLoader.LoadAnimConfig(AnimationConfigsPath + @"\" + PlayerAnimationConfigPath), _playerController);
+            _controllers.AddController(_playerAnimController);
+
+            _toolsController = new ToolsController(ToolsView, _playerController, ToolsTip);
+
+            _toiletController = new ToiletController(_playerController, Toilets);
+            _toiletController.AddScoreSystem(_scoreCount);
+
+            var toiletTransforms = new Dictionary<int, Vector3>();
+            foreach (var toilet in Toilets)
+            {
+                toiletTransforms.Add(toilet.GetInstanceID(), new Vector3(toilet.transform.position.x, toilet.transform.position.y - 0.3f, 0));
+            }
+            _visitorController = new VisitorController(toiletTransforms, _resourceLoader.LoadPrefab("Visitor"), VisitorSpawnTransform);
+            _controllers.AddController(_visitorController);
+            _toiletController.AddVisitorEvents(_visitorController);
+        }
+
+        private void Update()
+        {
+            _deltaTime = Time.deltaTime;
+            _controllers.Update(_deltaTime);
+        }
+
+        //private void FixedUpdate()
+        //{
+        //    _fixedDeltaTime = Time.fixedDeltaTime;
+        //    _controllers.FixedUpdate(_fixedDeltaTime);
+        //}
+
+        #endregion
+    }
+}

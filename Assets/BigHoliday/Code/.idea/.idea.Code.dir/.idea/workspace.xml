@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="48336219-9dbb-49a6-9140-f5ad1cbc3040" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Code.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Code.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle10.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle11.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle12.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle13.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle14.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle15.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle16.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle17.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle9.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/idle9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk3.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk4.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk5.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk6.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk7.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk8.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/mage_black/walk8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle31.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle31.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle32.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle32.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle33.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle33.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/idle9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/run6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk10.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk10.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk11.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk11.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk12.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk12.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk13.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk13.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk14.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk14.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk15.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk15.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk16.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk16.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk17.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk17.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk18.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk18.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk19.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk19.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk20.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk20.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk21.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk21.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk22.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk22.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk23.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk23.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk24.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk24.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk25.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk25.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk26.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk26.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk27.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk27.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk28.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk28.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk29.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk29.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk3.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk3.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk30.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk30.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk31.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk31.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk4.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk4.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk5.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk6.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk6.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk7.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk7.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk8.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk8.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk9.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/2D Fantasy Character Pack/Sprites/zombie/walk9.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/idle_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Dragon Warrior Files/Dragon Warrior PNG/walk_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_idle_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_01.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_01.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_02.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_02.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_03.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_03.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_04.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_04.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_05.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_05.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_06.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/Knight Files/Knight PNG/Knight_walk_06.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0000_enemyWalk_anim_001.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0000_enemyWalk_anim_001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0001_enemyWalk_anim_002.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0001_enemyWalk_anim_002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0002_enemyWalk_anim_003.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0002_enemyWalk_anim_003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0003_enemyWalk_anim_004.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0003_enemyWalk_anim_004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0004_enemyWalk_anim_005.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0004_enemyWalk_anim_005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0005_enemyWalk_anim_006.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0005_enemyWalk_anim_006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0006_enemyWalk_anim_007.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0006_enemyWalk_anim_007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0007_enemyWalk_anim_008.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0007_enemyWalk_anim_008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0008_enemyWalk_anim_009.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0008_enemyWalk_anim_009.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0009_enemyWalk_anim_010.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0009_enemyWalk_anim_010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0010_enemyWalk_anim_011.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0010_enemyWalk_anim_011.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0011_enemyWalk_anim_012.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0011_enemyWalk_anim_012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0012_enemyWalk_anim_013.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0012_enemyWalk_anim_013.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0013_enemyWalk_anim_014.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0013_enemyWalk_anim_014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0014_enemyWalk_anim_015.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0014_enemyWalk_anim_015.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0015_enemyWalk_anim_016.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_0015_enemyWalk_anim_016.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_idle2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/LittleIndian/SmallIndian/smallguy_idle2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle1.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle1.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/heroIndian_idle2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0001_run_anim_001.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0001_run_anim_001.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0001_run_anim_001.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0001_run_anim_001.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0002_run_anim_002.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0002_run_anim_002.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0002_run_anim_002.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0002_run_anim_002.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0003_run_anim_003.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0003_run_anim_003.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0003_run_anim_003.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0003_run_anim_003.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0004_run_anim_004.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0004_run_anim_004.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0004_run_anim_004.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0004_run_anim_004.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0005_run_anim_005.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0005_run_anim_005.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0005_run_anim_005.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0005_run_anim_005.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0006_run_anim_006.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0006_run_anim_006.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0006_run_anim_006.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0006_run_anim_006.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0007_run_anim_007.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0007_run_anim_007.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0007_run_anim_007.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0007_run_anim_007.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0008_run_anim_008.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0008_run_anim_008.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0008_run_anim_008.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0008_run_anim_008.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0009_run_anim_009.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0009_run_anim_009.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0009_run_anim_009.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0009_run_anim_009.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0010_run_anim_010.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0010_run_anim_010.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0010_run_anim_010.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0010_run_anim_010.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0011_run_anim_011.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0011_run_anim_011.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0011_run_anim_011.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0011_run_anim_011.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0012_run_anim_012.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0012_run_anim_012.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0012_run_anim_012.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0012_run_anim_012.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0013_run_anim_013.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0013_run_anim_013.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0013_run_anim_013.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0013_run_anim_013.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0014_run_anim_014.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0014_run_anim_014.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0014_run_anim_014.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/IndianHero_Sprites/RunSpear/herorun_0014_run_anim_014.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/hero.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/hero.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/hero/hero2.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/hero/hero2.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sprites/Resources/key.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Sprites/Resources/key.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sprites/Resources/vantuz.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Sprites/Resources/vantuz.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sprites/photo_2021-05-08_13-53-40.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Sprites/photo_2021-05-08_13-53-40.jpg.meta" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Timer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameLoader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/GameSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Toilet/ToiletView.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/GameLoader.cs" />
+      <option value="$PROJECT_DIR$/MenuControls.cs" />
+      <option value="$PROJECT_DIR$/Settings.cs" />
+      <option value="$PROJECT_DIR$/GameSettings.cs" />
+      <option value="$PROJECT_DIR$/Score.cs" />
+      <option value="$PROJECT_DIR$/Timer.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1sFY448urLWlUg8IJ3wY4Rqosr0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="48336219-9dbb-49a6-9140-f5ad1cbc3040" name="Default Changelist" comment="" />
+      <created>1620469613855</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1620469613855</updated>
+      <workItem from="1620469620591" duration="28000" />
+      <workItem from="1620469839714" duration="713000" />
+      <workItem from="1620483968155" duration="622000" />
+      <workItem from="1620488132672" duration="267000" />
+      <workItem from="1620490995957" duration="1954000" />
+      <workItem from="1620555564497" duration="610000" />
+      <workItem from="1620558093925" duration="2707000" />
+      <workItem from="1620566762725" duration="605000" />
+      <workItem from="1620594278059" duration="687000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
