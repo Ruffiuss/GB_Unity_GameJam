@@ -1,20 +1,22 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UniRx;
-using UnityEngine;
+﻿using UnityEngine;
 using Utils;
 
 namespace Core
 {
-    public class Core : MonoBehaviour
+    public class CoreStarter : MonoBehaviour
     {
         #region Fields
 
         [SerializeField] private Transform _rootUI;
         [SerializeField] private Canvas _canvasUI;
         [SerializeField] private TipsPresenter _tipsPresenter;
-        private PlayerEvents _playerEvents = new PlayerEvents();
+        [SerializeField] private PlayerPresenter _playerPresenter;
+
+        #endregion
+
+        #region Properties
+
+        public GameState CurrentGameState;
 
         #endregion
 
@@ -22,7 +24,10 @@ namespace Core
 
         void Start()
         {
-            _tipsPresenter.SubscribeFlow(_playerEvents.TipsFlow);
+            CurrentGameState = GameState.Playing;
+            _tipsPresenter.SubscribeFlow(_playerPresenter.CurrentTip);
+
+            
         }
 
         #endregion

@@ -9,6 +9,7 @@ TagManager:
   - Limit
   - Tools
   - Visitor
+  - tip
   layers:
   - Default
   - TransparentFX
