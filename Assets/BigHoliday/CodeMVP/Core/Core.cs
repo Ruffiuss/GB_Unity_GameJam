@@ -23,12 +23,6 @@ namespace Core
         void Start()
         {
             _tipsPresenter.SubscribeFlow(_playerEvents.TipsFlow);
-            Observable.Interval(TimeSpan.FromSeconds(5))
-                .Subscribe(_ =>
-                {
-                    _playerEvents.TipsFlow.Value = $"tip {System.DateTime.Now.Second}";
-                    Debug.Log($"tip {System.DateTime.Now.Second}");
-                });
         }
 
         #endregion
