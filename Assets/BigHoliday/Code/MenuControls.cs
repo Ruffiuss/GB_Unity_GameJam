@@ -7,7 +7,7 @@ namespace Island
     {
         public void PlayPressed()
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("NewGame");
         }
 
         public void ExitPressed()
