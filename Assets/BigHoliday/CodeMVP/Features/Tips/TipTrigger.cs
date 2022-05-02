@@ -7,12 +7,25 @@ namespace Features.Tips
         #region Fields
 
         [SerializeField] private string _tipText;
+        private bool _isShowed = false;
 
         #endregion
 
         #region Properites
 
-        public string TipText => _tipText;
+        public string TipText
+        {
+            get
+            {
+                if (!_isShowed)
+                {
+                    _isShowed = true;
+                    return _tipText;
+                }
+                else return "";
+            }
+            
+        }
 
         #endregion
     }

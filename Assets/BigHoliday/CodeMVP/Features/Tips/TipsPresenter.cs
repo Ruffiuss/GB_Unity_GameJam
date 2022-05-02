@@ -32,7 +32,7 @@ public class TipsPresenter : MonoBehaviour
 
     public void SubscribeFlow(ReactiveProperty<string> flow)
     {
-        flow.Where(t => t != null).Subscribe(_ => 
+        flow.Where(t => t != null && t != "").Subscribe(_ => 
         {
             _tipText.text = flow.Value;
             _tipText.enabled = true;

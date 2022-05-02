@@ -9,14 +9,9 @@ namespace Core
 
         [SerializeField] private Transform _rootUI;
         [SerializeField] private Canvas _canvasUI;
+        [SerializeField] private GameContext _gameProcess;
         [SerializeField] private TipsPresenter _tipsPresenter;
         [SerializeField] private PlayerPresenter _playerPresenter;
-
-        #endregion
-
-        #region Properties
-
-        public GameState CurrentGameState;
 
         #endregion
 
@@ -24,10 +19,7 @@ namespace Core
 
         void Start()
         {
-            CurrentGameState = GameState.Playing;
-            _tipsPresenter.SubscribeFlow(_playerPresenter.CurrentTip);
-
-            
+            _tipsPresenter.SubscribeFlow(_playerPresenter.CurrentTip);            
         }
 
         #endregion
