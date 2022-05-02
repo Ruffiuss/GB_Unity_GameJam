@@ -30,7 +30,7 @@ namespace Core
             {
                 trigger.Init(this, SelectTool);
             }
-            for (int i = 1; i < Enum.GetValues(typeof(ToolType)).Length -1; i++)
+            for (int i = 1; i <= Enum.GetValues(typeof(ToolType)).Length -1; i++)
             {
                 _toolAvailabilityMap.Add((ToolType)i, true);
             }
