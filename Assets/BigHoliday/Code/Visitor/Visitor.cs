@@ -91,9 +91,10 @@ namespace BigHoliday
         private void Move(Vector3 scaleSide, float deltaTime)
         {
             var distance = Vector2.Distance(transform.position, _movingTarget);
+            //Debug.DrawRay(transform.position, _movingTarget);
             //Debug.Log($"ScaleVector:{scaleSide}");
             //Debug.Log(distance);
-            if (distance > 0.2f)
+            if (distance > 0.29f)
             {
                 transform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED) * scaleSide.x);
                 transform.localScale = scaleSide;
