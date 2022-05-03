@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef485d0d9b86db4798f6e6bd5b44ed5, type: 3}
+  m_Name: hyper_blue
+  m_EditorClassIdentifier: 
+  Sequence:
+  - State: 0
+    AnimationSpeed: 10
+    Sprites:
+    - {fileID: 21300000, guid: d1890e552c8d208448e070cee892d0f2, type: 3}
+  - State: 1
+    AnimationSpeed: 10
+    Sprites:
+    - {fileID: 21300000, guid: d1890e552c8d208448e070cee892d0f2, type: 3}
+    - {fileID: 21300000, guid: fc3a1a2935da0404bb0356d45b1851ea, type: 3}
+    - {fileID: 21300000, guid: f922ae221b8e3e54a83a698d217d0592, type: 3}
+    - {fileID: 21300000, guid: 932cce80d899ecb48a19ec7435d059ec, type: 3}
+    - {fileID: 21300000, guid: 908273d4bed9bf0479d99cc97475d6f6, type: 3}
+    - {fileID: 21300000, guid: 96ccdaa9bf817a740b8b84dcd67c7a1a, type: 3}

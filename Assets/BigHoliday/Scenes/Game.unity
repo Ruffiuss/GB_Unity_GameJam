@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 1856775601}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -118,6 +118,8 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
@@ -155,6 +157,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -179,7 +182,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: a09f57a59e9880d4c87ec487b50afc4a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3f588be0f5ab7374b8a81bc69c73896f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -198,8 +201,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86252893}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.37, y: -2.464, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: -5, y: -3.5, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 684210367}
   m_Father: {fileID: 0}
@@ -243,7 +246,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 4.85, y: 10.18}
     newSize: {x: 1.28, y: 1.28}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -326,6 +329,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_RootOrder
@@ -334,12 +347,12 @@ PrefabInstance:
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.2
+      value: -1.88
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -437,7 +450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 229377367}
   m_Layer: 0
-  m_Name: Toilets
+  m_Name: bags
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -509,6 +522,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -533,7 +547,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: bc5d177c3d32c9e43826cec9d9f2047f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b8955b83cd93cde4883cdc636c504f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -555,7 +569,7 @@ GameObject:
   - component: {fileID: 302929209}
   - component: {fileID: 302929210}
   m_Layer: 0
-  m_Name: Paper
+  m_Name: Katana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -568,13 +582,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302929208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.64, y: 0.01, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6725605, w: 0.7400422}
+  m_LocalPosition: {x: 0.6700001, y: 1, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1351082231}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 84.53}
 --- !u!212 &302929210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -590,6 +604,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -614,12 +629,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0db5674857bb4c2438667bf30431a45c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5f71be776928ccd4ca020663106ad734, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 9.51, y: 0.93}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -681,7 +696,7 @@ Transform:
   m_GameObject: {fileID: 513344125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1601761873}
   - {fileID: 797866524}
@@ -725,11 +740,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6876121157b04da4b95e839e7734dfab, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b7dc27e8997a2414cad00f0ca42e68ef, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.01
+  m_Volume: 0.074
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -862,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.09, y: -0.17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1052,6 +1067,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &598954064
 Canvas:
   m_ObjectHideFlags: 0
@@ -1097,13 +1113,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 684210366}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0.17, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 86252895}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!212 &684210368
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1119,6 +1135,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1189,7 +1206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.47859335, y: 0.8504131}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -0.000030517578, y: 0.000030517578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &733781947
@@ -1205,14 +1222,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7882353, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.91027117, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 539ce51562051bb4cad31ac252a19daf, type: 3}
+    m_Font: {fileID: 12800000, guid: 3221aa5f7f67e20468a95cffa6062413, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 1
@@ -1271,7 +1289,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797866523}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1.78, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1694044448}
@@ -1382,11 +1400,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11380b47be58c4fa78a82752a3f61daa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.299
+      value: -6.9789996
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11380b47be58c4fa78a82752a3f61daa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.59
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 11380b47be58c4fa78a82752a3f61daa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1596,6 +1614,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_RootOrder
@@ -1604,12 +1632,12 @@ PrefabInstance:
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.15
+      value: 4.4700003
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -1686,7 +1714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 425998, guid: 1625b0df15965450c86850dd6d345e87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.43
       objectReference: {fileID: 0}
     - target: {fileID: 425998, guid: 1625b0df15965450c86850dd6d345e87, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1748,6 +1776,10 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.scalar
       value: 158.5
       objectReference: {fileID: 0}
+    - target: {fileID: 19909284, guid: 1625b0df15965450c86850dd6d345e87, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1625b0df15965450c86850dd6d345e87, type: 3}
 --- !u!1 &1232759937
@@ -1807,7 +1839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351082230}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.23, y: -2.34, z: 0}
+  m_LocalPosition: {x: -7.5, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1598316769}
@@ -1942,14 +1974,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7882353, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.97032166, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 539ce51562051bb4cad31ac252a19daf, type: 3}
+    m_Font: {fileID: 12800000, guid: 3221aa5f7f67e20468a95cffa6062413, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -1987,6 +2020,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_RootOrder
@@ -1995,12 +2038,12 @@ PrefabInstance:
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.98
+      value: 2.3000002
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -2073,6 +2116,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_RootOrder
@@ -2081,12 +2134,12 @@ PrefabInstance:
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.14
+      value: 0.18000005
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -2178,9 +2231,9 @@ MonoBehaviour:
   ToolsTip: {fileID: 1597230996}
   Score: {fileID: 1415023168}
   ToolSpriteNames:
-  - key
-  - vantuz
-  - paper
+  - ak47
+  - bita
+  - katana
   Toilets:
   - {fileID: 1637331259}
   - {fileID: 138377745}
@@ -2253,14 +2306,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.7882353, b: 0, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.99030924, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 539ce51562051bb4cad31ac252a19daf, type: 3}
+    m_Font: {fileID: 12800000, guid: 3221aa5f7f67e20468a95cffa6062413, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -2292,7 +2346,7 @@ GameObject:
   - component: {fileID: 1598316769}
   - component: {fileID: 1598316770}
   m_Layer: 0
-  m_Name: Key
+  m_Name: AK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2305,13 +2359,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598316768}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.41, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.0899999, y: 1, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1351082231}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &1598316770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2327,6 +2381,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2351,7 +2406,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0e8358a6671c03c4fae5926c4d28f4bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a61439887cd33174d824169d4d59eca9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2386,7 +2441,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601761872}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.75, y: -2.19, z: 0}
+  m_LocalPosition: {x: 35, y: -11.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 513344126}
@@ -2464,7 +2519,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674394765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -3.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2553,6 +2608,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_RootOrder
@@ -2561,12 +2626,12 @@ PrefabInstance:
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.37
+      value: 6.69
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -2682,6 +2747,67 @@ Transform:
   m_Father: {fileID: 797866524}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!850595691 &1856775601
+LightingSettings:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Settings.lighting
+  serializedVersion: 3
+  m_GIWorkflowMode: 1
+  m_EnableBakedLightmaps: 0
+  m_EnableRealtimeLightmaps: 0
+  m_RealtimeEnvironmentLighting: 1
+  m_BounceScale: 1
+  m_AlbedoBoost: 1
+  m_IndirectOutputScale: 1
+  m_UsingShadowmask: 1
+  m_BakeBackend: 0
+  m_LightmapMaxSize: 1024
+  m_BakeResolution: 40
+  m_Padding: 2
+  m_TextureCompression: 1
+  m_AO: 0
+  m_AOMaxDistance: 1
+  m_CompAOExponent: 1
+  m_CompAOExponentDirect: 0
+  m_ExtractAO: 0
+  m_MixedBakeMode: 2
+  m_LightmapsBakeMode: 1
+  m_FilterMode: 1
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
+  m_ExportTrainingData: 0
+  m_TrainingDataDestination: TrainingData
+  m_RealtimeResolution: 2
+  m_ForceWhiteAlbedo: 0
+  m_ForceUpdates: 0
+  m_FinalGather: 0
+  m_FinalGatherRayCount: 256
+  m_FinalGatherFiltering: 1
+  m_PVRCulling: 1
+  m_PVRSampling: 1
+  m_PVRDirectSampleCount: 32
+  m_PVRSampleCount: 500
+  m_PVREnvironmentSampleCount: 500
+  m_PVREnvironmentReferencePointCount: 2048
+  m_LightProbeSampleCountMultiplier: 4
+  m_PVRBounces: 2
+  m_PVRMinBounces: 2
+  m_PVREnvironmentMIS: 0
+  m_PVRFilteringMode: 2
+  m_PVRDenoiserTypeDirect: 0
+  m_PVRDenoiserTypeIndirect: 0
+  m_PVRDenoiserTypeAO: 0
+  m_PVRFilterTypeDirect: 0
+  m_PVRFilterTypeIndirect: 0
+  m_PVRFilterTypeAO: 0
+  m_PVRFilteringGaussRadiusDirect: 1
+  m_PVRFilteringGaussRadiusIndirect: 5
+  m_PVRFilteringGaussRadiusAO: 2
+  m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+  m_PVRFilteringAtrousPositionSigmaIndirect: 2
+  m_PVRFilteringAtrousPositionSigmaAO: 1
 --- !u!1 &1907488985
 GameObject:
   m_ObjectHideFlags: 0
@@ -2729,7 +2855,7 @@ GameObject:
   - component: {fileID: 2003721445}
   - component: {fileID: 2003721446}
   m_Layer: 0
-  m_Name: Vantuz
+  m_Name: Bita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2742,13 +2868,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003721444}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.17999995, y: 1, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1351082231}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &2003721446
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2764,6 +2890,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2788,7 +2915,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 9dddc3b760a1943439126e0e33642e68, type: 3}
+  m_Sprite: {fileID: 21300000, guid: defbdcd8708a7214eb025d02138a0e44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2852,6 +2979,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_RootOrder
@@ -2860,12 +2997,12 @@ PrefabInstance:
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.47
+      value: -4.1499996
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -3.4299998
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260151, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}

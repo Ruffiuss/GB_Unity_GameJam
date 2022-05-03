@@ -144,13 +144,13 @@ namespace BigHoliday
                 case ToiletStatus.Normal:
                     break;
                 case ToiletStatus.Dirty:
-                    _statusSprite = Resources.Load<Sprite>("poop");
+                    _statusSprite = Resources.Load<Sprite>("chosen");
                     break;
                 case ToiletStatus.Broken:
-                    _statusSprite = Resources.Load<Sprite>("broken");
+                    _statusSprite = Resources.Load<Sprite>("prototype");
                     break;
                 case ToiletStatus.Empty:
-                    _statusSprite = Resources.Load<Sprite>("paper_ended");
+                    _statusSprite = Resources.Load<Sprite>("outlaw");
                     break;
                 default:
                     break;

@@ -83,7 +83,7 @@ namespace BigHoliday
             {
                 if (_isInToolArea)
                 {
-                    _toolSpriteRenderer.sprite = _toolSprites["key"];
+                    _toolSpriteRenderer.sprite = _toolSprites["ak47"];
                     CurrentTool = 1;
                 }
                 else ToolInteract.Invoke(CurrentTool);
@@ -92,7 +92,7 @@ namespace BigHoliday
             {
                 if (_isInToolArea)
                 {
-                    _toolSpriteRenderer.sprite = _toolSprites["vantuz"];
+                    _toolSpriteRenderer.sprite = _toolSprites["bita"];
                     CurrentTool = 2;
                 }
                 else ToolInteract.Invoke(CurrentTool);
@@ -101,7 +101,7 @@ namespace BigHoliday
             {
                 if (_isInToolArea)
                 {
-                    _toolSpriteRenderer.sprite = _toolSprites["paper"];
+                    _toolSpriteRenderer.sprite = _toolSprites["katana"];
                     CurrentTool = 3;
                 }
                 else ToolInteract.Invoke(CurrentTool);

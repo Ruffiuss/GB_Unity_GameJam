@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef485d0d9b86db4798f6e6bd5b44ed5, type: 3}
+  m_Name: hyper_green
+  m_EditorClassIdentifier: 
+  Sequence:
+  - State: 1
+    AnimationSpeed: 10
+    Sprites:
+    - {fileID: 21300000, guid: 32d8f0c21b1747840a3e66a4b0475aaf, type: 3}
+    - {fileID: 21300000, guid: 5e6aebecf5e98cb4796495165672e708, type: 3}
+    - {fileID: 21300000, guid: 51d2413aba64bb549a1ed187f322bd96, type: 3}
+    - {fileID: 21300000, guid: 5d905729c4332d54f8ca0dc6000c5169, type: 3}
+    - {fileID: 21300000, guid: 093392bf52749cb4c85728d7e2d669b6, type: 3}
+    - {fileID: 21300000, guid: a092f2657e2333b4e98672c0e08a161e, type: 3}
+  - State: 0
+    AnimationSpeed: 3
+    Sprites:
+    - {fileID: 21300000, guid: 32d8f0c21b1747840a3e66a4b0475aaf, type: 3}

@@ -13,7 +13,7 @@ namespace BigHoliday
         public const int RANDOM_EVENT_MAXVALUE = 5;
         public const int RANDOM_EVENT_REPEAT_RATE = 20;
         
-        public const string TOOLS_TIP_TEXT = "Key= Z, Vantuz = X, Paper = C";
+        public const string TOOLS_TIP_TEXT = "AK47= Z, Bat = X, Katana = C";
 
         public const KeyCode PLAYER_TOOL1 = KeyCode.Z;
         public const KeyCode PLAYER_TOOL2 = KeyCode.X;
