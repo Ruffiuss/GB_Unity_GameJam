@@ -85,7 +85,7 @@ namespace BigHoliday
             Debug.Log($"{visitorID} requested");
             if (_approwedVisitors.Contains(visitorID))
             {
-                Debug.Log($"{visitorID} can in");
+                Debug.Log($"{visitorID} can ask for gun");
                 return true;
             }
             else
@@ -141,6 +141,8 @@ namespace BigHoliday
         {
             switch (status)
             {
+                case ToiletStatus.Waiting:
+                    break;
                 case ToiletStatus.Normal:
                     break;
                 case ToiletStatus.Dirty:

@@ -329,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_TagString
+      value: Toilet
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_Sprite
@@ -699,7 +704,6 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
   - {fileID: 1601761873}
-  - {fileID: 797866524}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1265,42 +1269,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minutesTimer: 0
   secondsTimer: 60
---- !u!1 &797866523
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 797866524}
-  m_Layer: 0
-  m_Name: ToiletPositions
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &797866524
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 797866523}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.78, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1694044448}
-  - {fileID: 1721202566}
-  - {fileID: 1907488986}
-  - {fileID: 1815356733}
-  - {fileID: 1789756785}
-  - {fileID: 2034588108}
-  m_Father: {fileID: 513344126}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &818297775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1368,7 +1336,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 818297775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b2d921de722f546b59eab5013a1175, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &933547226
@@ -1613,6 +1581,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toilet (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_TagString
+      value: Toilet
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -2020,6 +1993,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toilet (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_TagString
+      value: Toilet
+      objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_Sprite
@@ -2115,6 +2093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toilet (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_TagString
+      value: Toilet
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -2531,66 +2514,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 129417602}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1694044447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1694044448}
-  m_Layer: 0
-  m_Name: ToiletSpot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1694044448
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1694044447}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.05, y: -2.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797866524}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1721202565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1721202566}
-  m_Layer: 0
-  m_Name: ToiletSpot (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1721202566
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721202565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.82, y: -2.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797866524}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1729594243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2607,6 +2530,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Toilet (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_TagString
+      value: Toilet
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
@@ -2687,66 +2615,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1729594243}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1789756784
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1789756785}
-  m_Layer: 0
-  m_Name: ToiletSpot (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1789756785
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1789756784}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.59, y: -2.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797866524}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1815356732
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1815356733}
-  m_Layer: 0
-  m_Name: ToiletSpot (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1815356733
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815356732}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.43, y: -2.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797866524}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!850595691 &1856775601
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -2808,36 +2676,6 @@ LightingSettings:
   m_PVRFilteringAtrousPositionSigmaDirect: 0.5
   m_PVRFilteringAtrousPositionSigmaIndirect: 2
   m_PVRFilteringAtrousPositionSigmaAO: 1
---- !u!1 &1907488985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1907488986}
-  m_Layer: 0
-  m_Name: ToiletSpot (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1907488986
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907488985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -2.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797866524}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1910471003 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 11380b47be58c4fa78a82752a3f61daa,
@@ -2932,36 +2770,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1135764165}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2034588107
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2034588108}
-  m_Layer: 0
-  m_Name: ToiletSpot (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2034588108
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034588107}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.85, y: -2.19, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 797866524}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6052084635000948043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2977,6 +2785,11 @@ PrefabInstance:
     - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
         type: 3}
       propertyPath: m_Name
+      value: Toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052084636585260144, guid: 9b7f362028237d24ca45dcb2d1c60061,
+        type: 3}
+      propertyPath: m_TagString
       value: Toilet
       objectReference: {fileID: 0}
     - target: {fileID: 6052084636585260150, guid: 9b7f362028237d24ca45dcb2d1c60061,

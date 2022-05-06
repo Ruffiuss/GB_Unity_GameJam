@@ -9,8 +9,6 @@ namespace BigHoliday
     {
         #region Fields
 
-        private System.Random _random;
-        private float _timeToEvent;
         private int _visitorAwaiting;
 
         #endregion
@@ -29,10 +27,7 @@ namespace BigHoliday
 
         private void Awake()
         {
-            _random = new System.Random();
-            _timeToEvent = _random.Next(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
             Status = ToiletStatus.Normal;
-            InvokeRepeating("ChangeStatus", _timeToEvent, GameSettings.RANDOM_EVENT_REPEAT_RATE);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -43,10 +38,11 @@ namespace BigHoliday
             }
             if (collision.CompareTag("Visitor"))
             {
+                ChangeStatus();
                 //Debug.Log($"ToiletSee-{collision.name}:{collision.gameObject.GetInstanceID()}");
                 if (Status.Equals(ToiletStatus.Normal))
                 {
-                    ContactedToilet.Invoke(collision.gameObject.GetInstanceID(), "Visitor"); 
+                    ContactedToilet.Invoke(collision.gameObject.GetInstanceID(), "Visitor");
                 }
                 else
                 {
@@ -81,7 +77,7 @@ namespace BigHoliday
 
         #region Methods
 
-        private void ChangeStatus()
+        public void ChangeStatus()
         {
             if (Status == ToiletStatus.Normal)
             {
@@ -89,7 +85,6 @@ namespace BigHoliday
                 ToiletStatusChange.Invoke(Status, gameObject.GetInstanceID());
                 //Debug.Log($"{gameObject.name}-{Status}");
             }
-            _timeToEvent = UnityEngine.Random.Range(GameSettings.RANDOM_EVENT_MINVALUE, GameSettings.RANDOM_EVENT_MAXVALUE);
         }
 
         internal void RestoreStatus()

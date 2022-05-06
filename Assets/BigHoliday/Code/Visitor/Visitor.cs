@@ -14,6 +14,7 @@ namespace BigHoliday
         private System.Random _random;
         private SpriteAnimController _animatorController;
         private Rigidbody2D _rigidbody2D;
+        private ToiletView _lastToilet;
         private Vector3 _movingTarget;
         private Vector3 _leftScale = new Vector3(-1, 1, 0);
         private Vector3 _rightScale = new Vector3(1, 1, 0);

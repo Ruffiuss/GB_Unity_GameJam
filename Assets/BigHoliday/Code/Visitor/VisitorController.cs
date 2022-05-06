@@ -78,15 +78,7 @@ namespace BigHoliday
                         break;
                     case VisitorState.Arrived:
                         if (CheckToilet.Invoke(visitor.GetInstanceID()))
-                        {
-                            _toiletTimePassed += deltaTime;
-                            visitor.GetComponent<SpriteRenderer>().enabled = false;
-                            if (_toiletTimePassed > _inToiletTime)
-                            {
-                                _toiletTimePassed = 0.0f;
-                                VisitorDone(visitor);
-                            }
-                        }
+                            VisitorDone(visitor);
                         break;
                     case VisitorState.Done:
                         break;
