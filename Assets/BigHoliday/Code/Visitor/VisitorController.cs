@@ -12,14 +12,12 @@ namespace BigHoliday
         private GameObject _visitorTemplate;
         private Transform _spawnTransform;
         private Queue<GameObject> _visitorsQueue;
-        private Queue<Vector3> _freeToilets;
+        private Stack<Vector3> _freeToilets;
         private Dictionary<int, Vector3> _toiletDictionary;
         private Stack<Vector3> _busyToilets;
 
         private float _spawnDelay = 10.0f;
-        private float _inToiletTime = GameSettings.VISITOR_IN_TOILET_TIME;
         private float _spawnTimePassed = 0.0f;
-        private float _toiletTimePassed = 0.0f;
         private bool _haveFreeSpots = true;
 
         #endregion
@@ -40,12 +38,12 @@ namespace BigHoliday
             _spawnTransform = spawnTransform;
             _visitorTemplate = visitor;
             _visitorsQueue = new Queue<GameObject>();
-            _freeToilets = new Queue<Vector3>();
+            _freeToilets = new Stack<Vector3>();
             _busyToilets = new Stack<Vector3>();
 
             foreach (var key in _toiletDictionary.Keys)
             {
-                _freeToilets.Enqueue(_toiletDictionary[key]);
+                _freeToilets.Push(_toiletDictionary[key]);
             }
             
             SpawnVisitor();
@@ -108,11 +106,17 @@ namespace BigHoliday
                 var visitor = spawnedVisitor.AddComponent<Visitor>();
                 if (!_freeToilets.Count.Equals(0))
                 {
-                    _busyToilets.Push(_freeToilets.Dequeue());
+                    _busyToilets.Push(_freeToilets.Pop());
                     visitor.SetupDestination(_busyToilets.Peek());
+                    visitor.OnReleaseToilet += Visitor_OnReleaseToilet;
                 }
                 else _haveFreeSpots = false;
             }
+        }
+
+        private void Visitor_OnReleaseToilet(Vector3 toiletVector)
+        {
+            _freeToilets.Push(toiletVector);
         }
 
         #endregion

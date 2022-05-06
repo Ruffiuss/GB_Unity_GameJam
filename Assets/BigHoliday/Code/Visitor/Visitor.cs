@@ -14,7 +14,6 @@ namespace BigHoliday
         private System.Random _random;
         private SpriteAnimController _animatorController;
         private Rigidbody2D _rigidbody2D;
-        private ToiletView _lastToilet;
         private Vector3 _movingTarget;
         private Vector3 _leftScale = new Vector3(-1, 1, 0);
         private Vector3 _rightScale = new Vector3(1, 1, 0);
@@ -28,6 +27,7 @@ namespace BigHoliday
         public bool IsLooped { get; private set; }
         public VisitorState CurrentState { get; private set; }
         public event Action<AnimState> OnStateChange;
+        public event Action<Vector3> OnReleaseToilet;
 
         #endregion
 
@@ -86,6 +86,8 @@ namespace BigHoliday
 
         public void ChangeState(VisitorState state)
         {
+            if(state.Equals(VisitorState.Done))
+                    OnReleaseToilet?.Invoke(_movingTarget);
             CurrentState = state;
         }
 
