@@ -18,6 +18,7 @@ namespace BigHoliday
 
         private float _spawnDelay = 10.0f;
         private float _spawnTimePassed = 0.0f;
+        private float _visitorSpeedMultiplier = 1.0f;
         private bool _haveFreeSpots = true;
 
         #endregion
@@ -45,6 +46,8 @@ namespace BigHoliday
             {
                 _freeToilets.Push(_toiletDictionary[key]);
             }
+
+            
             
             SpawnVisitor();
         }
