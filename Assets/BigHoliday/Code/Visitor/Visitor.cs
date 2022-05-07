@@ -9,6 +9,8 @@ namespace BigHoliday
     {
         #region Fields
 
+        public float SpeedMultiplier;
+
         internal Transform SpawnPosition;
 
         private System.Random _random;
@@ -24,8 +26,8 @@ namespace BigHoliday
         #region Properties
 
         public SpriteRenderer SpriteRenderer { get; private set; }
-        public bool IsLooped { get; private set; }
         public VisitorState CurrentState { get; private set; }
+        public bool IsLooped { get; private set; }
         public event Action<AnimState> OnStateChange;
         public event Action<Vector3> OnReleaseToilet;
 
@@ -99,7 +101,7 @@ namespace BigHoliday
             //Debug.Log(distance);
             if (distance > 0.29f)
             {
-                transform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED) * scaleSide.x);
+                transform.Translate((Vector3.right * deltaTime * GameSettings.VISITOR_WALK_SPEED * SpeedMultiplier) * scaleSide.x);
                 transform.localScale = scaleSide;
                 if (_rigidbody2D.simulated == true) _rigidbody2D.simulated = false;
             }

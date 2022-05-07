@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
 
 
@@ -47,7 +48,7 @@ namespace BigHoliday
                 _freeToilets.Push(_toiletDictionary[key]);
             }
 
-            
+            Observable.Interval(TimeSpan.FromSeconds(5)).Subscribe(_=> { _visitorSpeedMultiplier += 0.2f; _spawnDelay -= 0.2f; });
             
             SpawnVisitor();
         }
@@ -107,14 +108,21 @@ namespace BigHoliday
                 var spawnedVisitor = GameObject.Instantiate(_visitorTemplate, _spawnTransform) as GameObject;
                 _visitorsQueue.Enqueue(spawnedVisitor);
                 var visitor = spawnedVisitor.AddComponent<Visitor>();
+                visitor.SpeedMultiplier = _visitorSpeedMultiplier;
                 if (!_freeToilets.Count.Equals(0))
                 {
                     _busyToilets.Push(_freeToilets.Pop());
                     visitor.SetupDestination(_busyToilets.Peek());
                     visitor.OnReleaseToilet += Visitor_OnReleaseToilet;
                 }
-                else _haveFreeSpots = false;
+                else
+                {
+                    _haveFreeSpots = false;
+                    Debug.Log("U lose");
+                    Time.timeScale = 0;
+                }
             }
+            else Debug.Log("U win");
         }
 
         private void Visitor_OnReleaseToilet(Vector3 toiletVector)
