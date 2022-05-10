@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UniRx;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 namespace BigHoliday
@@ -17,7 +18,7 @@ namespace BigHoliday
         private Dictionary<int, Vector3> _toiletDictionary;
         private Stack<Vector3> _busyToilets;
 
-        private float _spawnDelay = 10.0f;
+        private float _spawnDelay = 5.0f;
         private float _spawnTimePassed = 0.0f;
         private float _visitorSpeedMultiplier = 1.0f;
         private bool _haveFreeSpots = true;
@@ -120,6 +121,7 @@ namespace BigHoliday
                     _haveFreeSpots = false;
                     Debug.Log("U lose");
                     Time.timeScale = 0;
+                    SceneManager.LoadScene("Game over");
                 }
             }
             else Debug.Log("U win");
