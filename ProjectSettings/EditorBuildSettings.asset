@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BigHoliday/Scenes/Game.unity
     guid: 41339b9460dba6a47b1c903f13ed6fdd
+  - enabled: 1
+    path: Assets/BigHoliday/Scenes/Game over.unity
+    guid: dd3d53cbdc841f2459e89fca7555d22f
   m_configObjects: {}

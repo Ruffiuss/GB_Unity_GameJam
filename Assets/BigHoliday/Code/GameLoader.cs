@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 namespace BigHoliday
@@ -75,6 +76,10 @@ namespace BigHoliday
         {
             _deltaTime = Time.deltaTime;
             _controllers.Update(_deltaTime);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("menu");
+            }
         }
 
         //private void FixedUpdate()
